@@ -1,0 +1,772 @@
+@import "_nullstyle.scss";
+@import "./pages/home.scss";
+
+body {
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  overflow-x: clip;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-col__icon,
+.car-info-mobile__image {
+  display: none;
+}
+
+.model-more-btn {
+  .more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    width: 100%;
+    background: none;
+    border-radius: 40px;
+    font-family: "Nissan Brand";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    transition-duration: 0.3s;
+    span {
+      svg {
+        width: 100%;
+        height: 100%;
+        path {
+          transition-duration: 0.3s;
+        }
+      }
+    }
+  }
+}
+.model-more-btn:hover {
+  .more-btn {
+    border: 1px solid #666666;
+    color: #666666;
+    transition-duration: 0.3s;
+    span {
+      svg {
+        width: 100%;
+        height: 100%;
+        path::before {
+          transition-duration: 0.3s;
+          color: #666666;
+        }
+      }
+    }
+  }
+}
+
+.model-more-btn-price {
+  .more-btn {
+    display: block;
+    padding: 15px;
+    width: 100%;
+    background: #000;
+    border-radius: 40px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+  }
+}
+.model-more-btn-price:hover {
+  .more-btn {
+    background: none;
+    color: #000;
+    transition-duration: 0.3s;
+  }
+}
+
+.active {
+  display: flex !important;
+  flex-direction: column !important;
+}
+/**********************HOME PAGE***********************/
+
+/**********************DESIGN PAGE***********************/
+
+.main-design-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+
+  .main-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 0;
+
+    h1 {
+      font-size: 48px;
+      line-height: 100%;
+    }
+
+    h2 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  .main-wrap {
+    width: 50%;
+    margin-right: 20%;
+    .main-under-title {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 80%;
+      text-transform: uppercase;
+    }
+    .main-title {
+      font-family: "Nissan Brand";
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 110%;
+      margin-bottom: 20px;
+    }
+    .main-description {
+      font-family: "Nissan Brand";
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 26px;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .main-img {
+    width: 100vw;
+    height: auto;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.slider-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 100px;
+  .slider-wrap {
+    width: 75%;
+    overflow: hidden;
+    display: flex;
+    gap: 20px;
+    height: 500px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    .slider-list {
+      width: 60%;
+      height: 100% !important;
+      .slick-list.draggable {
+        height: 100% !important;
+        .slick-track {
+          height: 100%;
+        }
+      }
+    }
+    .slider-prev {
+      width: 40%;
+      height: 100% !important;
+      opacity: 0.5;
+      .slick-list.draggable {
+        height: 100% !important;
+        .slick-track {
+          height: 100%;
+        }
+      }
+    }
+    .slide {
+      height: 100% !important;
+      .slide-img {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+    .slick-prev::before,
+    .slick-next::before {
+      display: none;
+    }
+    .slick-next.slick-arrow {
+      width: 100%;
+    }
+    .slick-prev.slick-arrow {
+      width: 100%;
+    }
+    .slick-prev,
+    .slick-next {
+      top: 110%;
+    }
+  }
+  .slider-row {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    .slider-col {
+      width: 50%;
+      .slide-info {
+        text-align: start;
+        margin-top: 10px;
+        .slider-current {
+          display: flex;
+          font-family: "Nissan Brand";
+          font-weight: 400;
+          font-size: 25px;
+          line-height: 34px;
+          letter-spacing: 1px;
+          margin-bottom: 20px;
+        }
+        .current-slide,
+        .total-slides {
+          color: #000;
+        }
+        .slide-text {
+          font-family: "Nissan Brand";
+          font-weight: 300;
+          font-size: 15px;
+          line-height: 26px;
+          letter-spacing: 1px;
+          margin-bottom: 40px;
+        }
+      }
+      .slider-dots {
+        position: relative;
+        .slick-dots {
+          display: flex;
+          gap: 90px;
+          .slick-active {
+            width: 100%;
+            .dots-line {
+              width: 100%;
+              height: 2px;
+              background-color: #000;
+            }
+          }
+          li {
+            width: 100%;
+            .dots-line {
+              width: 100%;
+              height: 2px;
+              background-color: #acacac;
+            }
+          }
+        }
+      }
+      .slider-arrow {
+        position: relative;
+        .slick-prev {
+          left: 80%;
+        }
+        .slick-next {
+          right: 5%;
+        }
+      }
+    }
+  }
+}
+
+.inform-section {
+  width: 75%;
+  margin: 0 auto;
+}
+.inform-margin {
+  margin-bottom: 80px;
+}
+.description-inform {
+  font-family: "Nissan Brand";
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 1px;
+}
+.head-inform {
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 48px;
+  margin-bottom: 40px;
+}
+.head-inform-img {
+  width: 100%;
+}
+.row-inform {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .col-inform {
+    width: 48%;
+    display: flex;
+    align-items: center;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .col-center {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 24px;
+  }
+}
+.sub-title-inform {
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 46px;
+  padding: 75px 0;
+}
+.sub-title {
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 46px;
+}
+.row-revers {
+  flex-direction: row-reverse;
+}
+.inform-wrap {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.connect-section {
+  .head-inform {
+    margin-bottom: 40px;
+  }
+  img {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  .blog-list {
+    width: 75%;
+    margin: 0 auto 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    .blog-item {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      .blog-img__wrap {
+        margin-bottom: 20px;
+        .blog-img {
+          margin: 0;
+        }
+      }
+      .blog-title {
+        margin-bottom: 10px;
+        font-family: "Nissan Brand";
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .blog-description {
+        margin-bottom: 20px;
+        font-family: "Nissan Brand";
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        flex: 1 1 auto;
+      }
+    }
+  }
+}
+
+.mobility-section {
+  .head-inform {
+    margin-bottom: 40px;
+  }
+  .blog-list {
+    width: 75%;
+    margin: 0 auto 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    .blog-item {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      .blog-img__wrap {
+        margin-bottom: 20px;
+        width: 100%;
+        .blog-img {
+          margin: 0;
+          width: 100%;
+        }
+      }
+      .blog-title {
+        margin-bottom: 10px;
+        font-family: "Nissan Brand";
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .blog-description {
+        margin-bottom: 20px;
+        font-family: "Nissan Brand";
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        flex: 1 1 auto;
+      }
+    }
+  }
+}
+
+.personal-section {
+  width: 75%;
+  margin: 0 auto 80px;
+  .head-inform {
+    margin-bottom: 40px;
+  }
+}
+
+.more-section {
+  width: 75%;
+  margin: 0 auto 80px;
+  .more-title {
+    font-family: "Nissan Brand";
+    font-weight: 300;
+    font-size: 54px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  .more-btn-groupe {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  .description-inform {
+    text-align: justify;
+  }
+}
+
+// Mobile main page
+@media (max-width: 767px) {
+  // tmp
+  .header-main {
+    display: none;
+  }
+
+  .header-mobile {
+    display: block;
+  }
+
+  .mobile-design-menu {
+    display: block;
+  }
+
+  .main-design-section {
+    .main-wrap {
+      width: 100%;
+      margin-right: 0;
+      padding: 0 16px;
+    }
+  }
+
+  .main-section__second {
+    .more-btn {
+      color: #000 !important;
+      border: 1px solid #000 !important;
+      svg {
+        color: #000 !important;
+      }
+    }
+  }
+
+  .main-section {
+    background: none !important;
+    padding: 0;
+    width: 100%;
+    #main-section-first__img {
+      background: url("/assets/img/qashqai1.png") 0 0 / 100% 100% no-repeat;
+    }
+    #main-section-second__img {
+      background: url("/assets/img/qashqai2.png") 0 0 / 100% 100% no-repeat;
+    }
+    .car-info {
+      &-mobile__image {
+        display: block;
+        width: 100%;
+        height: 300px;
+        background: url("/assets/img/juke.png") 0 0 / 100% 100% no-repeat;
+      }
+      &-title,
+      &-subtitle {
+        color: #000 !important;
+      }
+
+      .model-more-btn {
+        .more-btn {
+          color: #000;
+          border: 1px solid #000;
+
+          span {
+            svg {
+              width: 100%;
+              height: 100%;
+              path {
+                color: #000;
+                transition-duration: 0.3s;
+              }
+            }
+          }
+        }
+      }
+    }
+    .car-info-wrap {
+      width: 100%;
+      padding: 0;
+      .car-info {
+        width: 100%;
+        background: none;
+        backdrop-filter: none;
+      }
+    }
+  }
+
+  .section-model {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15%;
+    justify-content: center;
+    .model-wrap {
+      max-width: 90%;
+      .section-title {
+        .title {
+          font-size: 32px;
+          text-align: center;
+        }
+      }
+      .model-list {
+        display: flex;
+        flex-direction: column;
+        .model-item {
+          .model-price {
+            display: flex;
+            flex-direction: column;
+            .price {
+              color: #c3002f;
+            }
+            .price-text {
+              margin-top: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slider-section {
+    .slider-wrap {
+      width: 85%;
+      height: 200px;
+    }
+
+    .slider-arrow {
+      display: none;
+    }
+
+    .slider-row {
+      width: 100%;
+      padding: 0 26px;
+
+      .slider-col {
+        width: 100% !important;
+
+        &:nth-of-type(2) {
+          display: none;
+        }
+      }
+    }
+
+    .slick-dots {
+      gap: 0 !important;
+    }
+  }
+
+  .section-inform {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15%;
+    .inform-wrap {
+      max-width: 90%;
+      width: 100%;
+      .inform-list {
+        margin-bottom: 15%;
+        .inform-item,
+        .inform-item:nth-child(even) {
+          flex-direction: column;
+          .inform-img {
+            order: 1;
+            width: 100%;
+          }
+          .inform-content {
+            order: 2;
+            width: 100%;
+            padding: 0;
+            margin-top: 5%;
+            .inform-text {
+              font-size: 14px;
+              margin-bottom: 5%;
+            }
+            .inform-title {
+              font-size: 20px;
+              line-height: 26px;
+              font-weight: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .row-inform {
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 24px;
+
+    .col-inform {
+      width: 100% !important;
+
+      .sub-title-inform,
+      .sub-title {
+        padding: 0;
+      }
+    }
+  }
+
+  .head-inform {
+    font-size: 32px;
+		line-height: 120%;
+  }
+
+  .head-inform-img {
+    margin-bottom: 24px;
+  }
+
+  .blog-list {
+    display: flex !important;
+    flex-direction: column;
+    width: 100% !important;
+    padding: 0 16px;
+  }
+
+  .personal-section, .inform-wrap, .inform-section {
+    width: 100% !important;
+    padding: 0 16px;
+  }
+
+  .mobility-section {
+    .head-inform,
+    .inform-wrap {
+      width: 100% !important;
+      padding: 0 16px;
+    }
+  }
+
+  // .blog-list {
+  // 	width: 100% !important;
+  // 	padding: 0 16px;
+  // }
+
+  .more-section {
+    width: 100% !important;
+    padding: 0 16px;
+
+    .more-btn-groupe {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .footer {
+    width: 100%;
+    padding: 0;
+    .footer-wrap {
+      max-width: 100%;
+      width: 100%;
+      padding-top: 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      .footer-col {
+        position: relative;
+        border-bottom: 1px solid #fff;
+        align-items: start;
+        padding: 0 5%;
+        margin-bottom: 5%;
+        .footer-col__title {
+          text-transform: uppercase;
+          font-size: 16px;
+        }
+        .footer-list {
+          display: none;
+          .footer-item {
+            margin-bottom: 10%;
+            font-size: 14px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+        .footer-col__icon {
+          display: block;
+          position: absolute;
+          top: 5px;
+          right: 3%;
+          transform: rotate(180deg);
+          transition: 0.5s;
+        }
+      }
+      .footer-col:last-child {
+        margin-top: 10%;
+        border: none;
+        .footer-list {
+          display: block;
+          .footer-item:first-child {
+            display: flex;
+            flex-direction: column;
+          }
+          .footer-item:last-child {
+            display: none;
+          }
+        }
+        .footer-social {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

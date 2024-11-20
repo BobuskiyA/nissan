@@ -66,6 +66,7 @@ ul li {
 
 img {
   vertical-align: top;
+  object-fit: cover;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -74,81 +75,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-.footer-col__icon, .car-info-mobile__image {
-  display: none;
-}
-
-.model-more-btn .more-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  padding: 15px;
-  width: 100%;
-  background: none;
-  border-radius: 40px;
-  font-family: "Nissan Brand";
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  color: #000;
-  text-transform: uppercase;
-  border: 1px solid #000;
-  transition-duration: 0.3s;
-}
-.model-more-btn .more-btn span svg {
-  width: 100%;
-  height: 100%;
-}
-.model-more-btn .more-btn span svg path {
-  transition-duration: 0.3s;
-}
-
-.model-more-btn:hover .more-btn {
-  border: 1px solid #666666;
-  color: #666666;
-  transition-duration: 0.3s;
-}
-.model-more-btn:hover .more-btn span svg {
-  width: 100%;
-  height: 100%;
-}
-.model-more-btn:hover .more-btn span svg path::before {
-  transition-duration: 0.3s;
-  color: #666666;
-}
-
-.model-more-btn-price .more-btn {
-  display: block;
-  padding: 15px;
-  width: 100%;
-  background: #000;
-  border-radius: 40px;
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: 2px;
-  text-align: center;
-  color: #fff;
-  border: 1px solid #000;
-  text-transform: uppercase;
-  transition-duration: 0.3s;
-}
-
-.model-more-btn-price:hover .more-btn {
-  background: none;
-  color: #000;
-  transition-duration: 0.3s;
-}
-
-.active {
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-/**********************HOME PAGE***********************/
 .home .header-main .main-menu .menu-inform .menu-inform-title {
   color: #fff;
   font-size: 34px;
@@ -160,7 +86,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-main {
   width: 100%;
-  margin-bottom: 100px;
 }
 .header-main .nav-submenu__wrap {
   display: flex;
@@ -203,10 +128,19 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   padding: 50px 80px;
-  margin-bottom: 100px;
 }
 .header-main .main-menu .menu-inform {
   display: flex;
+}
+.header-main .main-menu .menu-inform .menu-left {
+  display: flex;
+  flex-direction: column;
+}
+.header-main .main-menu .menu-inform .menu-left .menu-link {
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
 }
 .header-main .main-menu .menu-inform .menu-inform-logo {
   margin-right: 40px;
@@ -271,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 .header-main .design-menu {
-  background: #EAEAEA;
+  background: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 2em;
   height: 60%;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
-  background: #C3002F;
+  background: #c3002f;
 }
 .header-main .design-menu .menu-list .active::after {
   content: "";
@@ -311,15 +245,68 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
-  background: #C3002F;
+  background: #c3002f;
+}
+
+.mobile-design-menu {
+  display: none;
+}
+.mobile-design-menu-active .menu-list {
+  height: auto !important;
+  padding: 16px !important;
+  border-bottom: 1px solid #D9D9D9;
+}
+.mobile-design-menu-active .menu-list .menu-item {
+  padding: 10px 0;
+}
+.mobile-design-menu .head {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 30px 12px 16px;
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+}
+.mobile-design-menu .head-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.mobile-design-menu .menu-list {
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.mobile-design-menu .menu-list .menu-item {
+  font-size: 14px;
+}
+
+.header-mobile {
+  display: none;
+  color: #000;
+}
+.header-mobile-black {
+  color: #fff;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 12%, #000000 29%) !important;
+}
+.header-mobile .main-menu {
+  padding: 16px 16px 30px;
+}
+.header-mobile .main-menu .menu-inform-logo {
+  margin-right: 12px !important;
+}
+.header-mobile .main-menu .menu-inform-title {
+  font-size: 16px !important;
+  line-height: 100% !important;
+  width: 180px !important;
 }
 
 .main-section {
-  height: 650px;
-  padding-top: 300px;
+  padding-top: 20%;
+  background-size: cover;
 }
 .main-section .car-info-wrap {
-  padding: 50px 80px;
+  padding: 0 80px 50px;
   display: flex;
 }
 .main-section .car-info-wrap .car-info {
@@ -393,14 +380,18 @@ h1, h2, h3, h4, h5, h6 {
   color: #666666;
 }
 
-.main-section:nth-child(2n+1) .car-info {
+.main-section:nth-child(2n) .car-info {
   background: none;
   backdrop-filter: none;
 }
-.main-section:nth-child(2n+1) .model-more-btn {
+.main-section:nth-child(2n) .car-info .car-info-title,
+.main-section:nth-child(2n) .car-info .car-info-subtitle {
+  color: #fff;
+}
+.main-section:nth-child(2n) .model-more-btn {
   margin-bottom: 10px;
 }
-.main-section:nth-child(2n+1) .model-more-btn .more-btn {
+.main-section:nth-child(2n) .model-more-btn .more-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,24 +410,24 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #fff;
   transition-duration: 0.3s;
 }
-.main-section:nth-child(2n+1) .model-more-btn .more-btn span svg {
+.main-section:nth-child(2n) .model-more-btn .more-btn span svg {
   width: 100%;
   height: 100%;
 }
-.main-section:nth-child(2n+1) .model-more-btn .more-btn span svg path {
+.main-section:nth-child(2n) .model-more-btn .more-btn span svg path {
   color: #fff;
   transition-duration: 0.3s;
 }
-.main-section:nth-child(2n+1) .model-more-btn:hover .more-btn {
-  border: 1px solid #000;
+.main-section:nth-child(2n) .model-more-btn:hover .more-btn {
+  background-color: #fff;
   color: #000;
   transition-duration: 0.3s;
 }
-.main-section:nth-child(2n+1) .model-more-btn:hover .more-btn span svg {
+.main-section:nth-child(2n) .model-more-btn:hover .more-btn span svg {
   width: 100%;
   height: 100%;
 }
-.main-section:nth-child(2n+1) .model-more-btn:hover .more-btn span svg path {
+.main-section:nth-child(2n) .model-more-btn:hover .more-btn span svg path {
   transition-duration: 0.3s;
   color: #000 !important;
 }
@@ -445,7 +436,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
+  margin: 100px 0;
 }
 .section-model .model-wrap {
   max-width: 75%;
@@ -650,6 +641,93 @@ h1, h2, h3, h4, h5, h6 {
   width: 50%;
 }
 
+body {
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  overflow-x: clip;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-col__icon,
+.car-info-mobile__image {
+  display: none;
+}
+
+.model-more-btn .more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  width: 100%;
+  background: none;
+  border-radius: 40px;
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  transition-duration: 0.3s;
+}
+.model-more-btn .more-btn span svg {
+  width: 100%;
+  height: 100%;
+}
+.model-more-btn .more-btn span svg path {
+  transition-duration: 0.3s;
+}
+
+.model-more-btn:hover .more-btn {
+  border: 1px solid #666666;
+  color: #666666;
+  transition-duration: 0.3s;
+}
+.model-more-btn:hover .more-btn span svg {
+  width: 100%;
+  height: 100%;
+}
+.model-more-btn:hover .more-btn span svg path::before {
+  transition-duration: 0.3s;
+  color: #666666;
+}
+
+.model-more-btn-price .more-btn {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  background: #000;
+  border-radius: 40px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+}
+
+.model-more-btn-price:hover .more-btn {
+  background: none;
+  color: #000;
+  transition-duration: 0.3s;
+}
+
+.active {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/**********************HOME PAGE***********************/
 /**********************DESIGN PAGE***********************/
 .main-design-section {
   display: flex;
@@ -658,14 +736,35 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   margin-bottom: 100px;
 }
+.main-design-section .main-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 60px 0;
+}
+.main-design-section .main-title-wrapper h1 {
+  font-size: 48px;
+  line-height: 100%;
+}
+.main-design-section .main-title-wrapper h2 {
+  font-size: 14px;
+  line-height: 18px;
+}
 .main-design-section .main-wrap {
   width: 50%;
+  margin-right: 20%;
+}
+.main-design-section .main-wrap .main-under-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 80%;
+  text-transform: uppercase;
 }
 .main-design-section .main-wrap .main-title {
   font-family: "Nissan Brand";
   font-weight: 400;
   font-size: 64px;
-  line-height: 88px;
+  line-height: 110%;
   margin-bottom: 20px;
 }
 .main-design-section .main-wrap .main-description {
@@ -675,6 +774,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 26px;
   letter-spacing: 1px;
   margin-bottom: 40px;
+}
+.main-design-section .main-img {
+  width: 100vw;
+  height: auto;
+}
+.main-design-section .main-img img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .slider-section {
@@ -721,7 +828,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100% !important;
   height: 100% !important;
 }
-.slider-section .slider-wrap .slick-prev::before, .slider-section .slider-wrap .slick-next::before {
+.slider-section .slider-wrap .slick-prev::before,
+.slider-section .slider-wrap .slick-next::before {
   display: none;
 }
 .slider-section .slider-wrap .slick-next.slick-arrow {
@@ -730,7 +838,8 @@ h1, h2, h3, h4, h5, h6 {
 .slider-section .slider-wrap .slick-prev.slick-arrow {
   width: 100%;
 }
-.slider-section .slider-wrap .slick-prev, .slider-section .slider-wrap .slick-next {
+.slider-section .slider-wrap .slick-prev,
+.slider-section .slider-wrap .slick-next {
   top: 110%;
 }
 .slider-section .slider-row {
@@ -754,7 +863,8 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-.slider-section .slider-row .slider-col .slide-info .current-slide, .slider-section .slider-row .slider-col .slide-info .total-slides {
+.slider-section .slider-row .slider-col .slide-info .current-slide,
+.slider-section .slider-row .slider-col .slide-info .total-slides {
   color: #000;
 }
 .slider-section .slider-row .slider-col .slide-info .slide-text {
@@ -786,7 +896,7 @@ h1, h2, h3, h4, h5, h6 {
 .slider-section .slider-row .slider-col .slider-dots .slick-dots li .dots-line {
   width: 100%;
   height: 2px;
-  background-color: #ACACAC;
+  background-color: #acacac;
 }
 .slider-section .slider-row .slider-col .slider-arrow {
   position: relative;
@@ -829,12 +939,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .row-inform {
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 .row-inform .col-inform {
-  width: 50%;
+  width: 48%;
   display: flex;
   align-items: center;
+}
+.row-inform .col-inform > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .row-inform .col-center {
   flex-direction: column;
@@ -981,8 +1097,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 767px) {
-  header {
+  .header-main {
     display: none;
+  }
+  .header-mobile {
+    display: block;
+  }
+  .mobile-design-menu {
+    display: block;
+  }
+  .main-design-section .main-wrap {
+    width: 100%;
+    margin-right: 0;
+    padding: 0 16px;
   }
   .main-section__second .more-btn {
     color: #000 !important;
@@ -1007,6 +1134,21 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 300px;
     background: url("/assets/img/juke.png") 0 0/100% 100% no-repeat;
+  }
+  .main-section .car-info-title, .main-section .car-info-subtitle {
+    color: #000 !important;
+  }
+  .main-section .car-info .model-more-btn .more-btn {
+    color: #000;
+    border: 1px solid #000;
+  }
+  .main-section .car-info .model-more-btn .more-btn span svg {
+    width: 100%;
+    height: 100%;
+  }
+  .main-section .car-info .model-more-btn .more-btn span svg path {
+    color: #000;
+    transition-duration: 0.3s;
   }
   .main-section .car-info-wrap {
     width: 100%;
@@ -1039,10 +1181,30 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
   }
   .section-model .model-wrap .model-list .model-item .model-price .price {
-    color: #C3002F;
+    color: #c3002f;
   }
   .section-model .model-wrap .model-list .model-item .model-price .price-text {
     margin-top: 5%;
+  }
+  .slider-section .slider-wrap {
+    width: 85%;
+    height: 200px;
+  }
+  .slider-section .slider-arrow {
+    display: none;
+  }
+  .slider-section .slider-row {
+    width: 100%;
+    padding: 0 26px;
+  }
+  .slider-section .slider-row .slider-col {
+    width: 100% !important;
+  }
+  .slider-section .slider-row .slider-col:nth-of-type(2) {
+    display: none;
+  }
+  .slider-section .slick-dots {
+    gap: 0 !important;
   }
   .section-inform {
     width: 100%;
@@ -1056,27 +1218,75 @@ h1, h2, h3, h4, h5, h6 {
   .section-inform .inform-wrap .inform-list {
     margin-bottom: 15%;
   }
-  .section-inform .inform-wrap .inform-list .inform-item, .section-inform .inform-wrap .inform-list .inform-item:nth-child(even) {
+  .section-inform .inform-wrap .inform-list .inform-item,
+  .section-inform .inform-wrap .inform-list .inform-item:nth-child(even) {
     flex-direction: column;
   }
-  .section-inform .inform-wrap .inform-list .inform-item .inform-img, .section-inform .inform-wrap .inform-list .inform-item:nth-child(even) .inform-img {
+  .section-inform .inform-wrap .inform-list .inform-item .inform-img,
+  .section-inform .inform-wrap .inform-list .inform-item:nth-child(even) .inform-img {
     order: 1;
     width: 100%;
   }
-  .section-inform .inform-wrap .inform-list .inform-item .inform-content, .section-inform .inform-wrap .inform-list .inform-item:nth-child(even) .inform-content {
+  .section-inform .inform-wrap .inform-list .inform-item .inform-content,
+  .section-inform .inform-wrap .inform-list .inform-item:nth-child(even) .inform-content {
     order: 2;
     width: 100%;
     padding: 0;
     margin-top: 5%;
   }
-  .section-inform .inform-wrap .inform-list .inform-item .inform-content .inform-text, .section-inform .inform-wrap .inform-list .inform-item:nth-child(even) .inform-content .inform-text {
+  .section-inform .inform-wrap .inform-list .inform-item .inform-content .inform-text,
+  .section-inform .inform-wrap .inform-list .inform-item:nth-child(even) .inform-content .inform-text {
     font-size: 14px;
     margin-bottom: 5%;
   }
-  .section-inform .inform-wrap .inform-list .inform-item .inform-content .inform-title, .section-inform .inform-wrap .inform-list .inform-item:nth-child(even) .inform-content .inform-title {
+  .section-inform .inform-wrap .inform-list .inform-item .inform-content .inform-title,
+  .section-inform .inform-wrap .inform-list .inform-item:nth-child(even) .inform-content .inform-title {
     font-size: 20px;
     line-height: 26px;
     font-weight: 400px;
+  }
+  .row-inform {
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 24px;
+  }
+  .row-inform .col-inform {
+    width: 100% !important;
+  }
+  .row-inform .col-inform .sub-title-inform,
+  .row-inform .col-inform .sub-title {
+    padding: 0;
+  }
+  .head-inform {
+    font-size: 32px;
+    line-height: 120%;
+  }
+  .head-inform-img {
+    margin-bottom: 24px;
+  }
+  .blog-list {
+    display: flex !important;
+    flex-direction: column;
+    width: 100% !important;
+    padding: 0 16px;
+  }
+  .personal-section, .inform-wrap, .inform-section {
+    width: 100% !important;
+    padding: 0 16px;
+  }
+  .mobility-section .head-inform,
+  .mobility-section .inform-wrap {
+    width: 100% !important;
+    padding: 0 16px;
+  }
+  .more-section {
+    width: 100% !important;
+    padding: 0 16px;
+  }
+  .more-section .more-btn-groupe {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
   .footer {
     width: 100%;
@@ -1138,3 +1348,5 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
