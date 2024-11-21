@@ -804,247 +804,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.home .header-main .main-menu .menu-inform .menu-inform-title {
-  color: #fff;
-  font-size: 34px;
-  line-height: 54px;
-}
-.home .header-main .main-menu .menu-pages .menu-list .menu-item a {
-  color: #fff;
-}
-
-.header-main {
-  width: 100%;
-}
-.header-main .nav-submenu__wrap {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 80px;
-  background: #000;
-}
-.header-main .nav-submenu__wrap .nav-submenu-inform {
-  display: flex;
-}
-.header-main .nav-submenu__wrap .nav-submenu-inform .nav-submenu-text {
-  font-family: "Nissan Brand";
-  font-size: 12px;
-  font-weight: 400;
-  color: #fff;
-}
-.header-main .nav-submenu__wrap .nav-submenu-inform a.nav-inform-link {
-  color: #fff;
-  font-weight: 700;
-}
-.header-main .nav-submenu__wrap .nav-submenu-inform .nav-submenu-inform-phone {
-  margin-right: 15px;
-}
-.header-main .nav-submenu__wrap .nav-submenu .nav-submenu__list {
-  display: flex;
-}
-.header-main .nav-submenu__wrap .nav-submenu .nav-submenu__list .nav-submenu__item {
-  margin-right: 10px;
-}
-.header-main .nav-submenu__wrap .nav-submenu .nav-submenu__list .nav-submenu__item a {
-  font-family: "Nissan Brand";
-  font-size: 12px;
-  font-weight: 400;
-  color: #fff;
-}
-.header-main .nav-submenu__wrap .nav-submenu .nav-submenu__list .nav-submenu__item:last-child {
-  margin: 0;
-}
-.header-main .main-menu {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px 80px;
-}
-.header-main .main-menu .menu-inform {
-  display: flex;
-}
-.header-main .main-menu .menu-inform .menu-left {
-  display: flex;
-  flex-direction: column;
-}
-.header-main .main-menu .menu-inform .menu-left .menu-link {
-  font-family: "Nissan Brand";
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-}
-.header-main .main-menu .menu-inform .menu-inform-logo {
-  margin-right: 40px;
-  display: flex;
-  align-items: center;
-}
-.header-main .main-menu .menu-inform .menu-inform-title {
-  font-family: "Nissan Brand";
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 34px;
-  color: #000;
-  width: 50%;
-}
-.header-main .main-menu .menu-pages {
-  position: relative;
-}
-.header-main .main-menu .menu-pages .menu-list {
-  display: flex;
-}
-.header-main .main-menu .menu-pages .menu-list .menu-item {
-  margin-right: 15px;
-}
-.header-main .main-menu .menu-pages .menu-list .menu-item a {
-  font-family: "Nissan Brand";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 14px;
-  color: #000;
-}
-.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list {
-  position: absolute;
-  top: 20%;
-  left: 0;
-  display: none;
-  justify-content: space-between;
-  background: #fff;
-  padding: 16px;
-  gap: 15px;
-  width: fit-content;
-}
-.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item {
-  list-style: none;
-}
-.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item a {
-  font-family: "Nissan Brand";
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 19px;
-  text-align: left;
-  color: #000;
-  display: flex;
-  justify-content: space-between;
-}
-.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item a::after {
-  content: "›";
-  font-family: "Courier New";
-  font-size: 24px;
-  margin-left: 10px;
-}
-.header-main .main-menu .menu-pages .menu-list .menu-item:last-child {
-  margin: 0;
-}
-.header-main .design-menu {
-  background: #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 0;
-}
-.header-main .design-menu .menu-list {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-.header-main .design-menu .menu-list .menu-item {
-  font-family: "Nissan Brand";
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 24px;
-  position: relative;
-}
-.header-main .design-menu .menu-list .menu-item a {
-  color: #000;
-}
-.header-main .design-menu .menu-list .active::before {
-  content: "";
-  position: absolute;
-  top: 125%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 2em;
-  height: 60%;
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
-  background: #c3002f;
-}
-.header-main .design-menu .menu-list .active::after {
-  content: "";
-  position: absolute;
-  top: 125%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
-  background: #c3002f;
-}
-
-.mobile-design-menu {
-  display: none;
-}
-.mobile-design-menu-active .head-icon {
-  rotate: 180deg;
-}
-.mobile-design-menu-active .menu-list {
-  height: auto !important;
-  padding: 16px !important;
-  border-bottom: 1px solid #d9d9d9;
-  clip-path: inset(0 0% 0% 0) !important;
-  pointer-events: all;
-}
-.mobile-design-menu-active .menu-list .menu-item {
-  padding: 10px 0;
-}
-.mobile-design-menu .head {
-  display: flex;
-  justify-content: space-between;
-  padding: 14px 30px 12px 16px;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
-}
-.mobile-design-menu .head-title {
-  font-size: 16px;
-  font-weight: bold;
-}
-.mobile-design-menu .head-icon {
-  transition: rotate 0.3s ease-in-out;
-}
-.mobile-design-menu .menu-list {
-  display: flex;
-  flex-direction: column;
-  padding: 16px !important;
-  overflow: hidden;
-  pointer-events: none;
-  clip-path: inset(0 0% 100% 0);
-  transition: clip-path 0.3s ease-in-out;
-  position: absolute;
-  background: white;
-  left: 0;
-  right: 0;
-}
-.mobile-design-menu .menu-list .menu-item {
-  font-size: 14px;
-  padding: 10px 0;
-}
-
-.header-mobile {
-  display: none;
-  color: #000;
-}
-.header-mobile-black {
-  color: #fff;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 12%, #000000 29%) !important;
-}
-.header-mobile .main-menu {
-  padding: 16px 16px 30px;
-}
-.header-mobile .main-menu .menu-inform-logo {
-  margin-right: 12px !important;
-}
-.header-mobile .main-menu .menu-inform-title {
-  font-size: 16px !important;
-  line-height: 100% !important;
-  width: 180px !important;
-}
-
 .main-section {
   padding-top: 20%;
   background-size: cover;
@@ -1502,10 +1261,427 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff !important;
 }
 
+.header-main {
+  width: 100%;
+}
+.header-main .nav-submenu__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 80px;
+  background: #000;
+}
+.header-main .nav-submenu__wrap .nav-submenu-inform {
+  display: flex;
+}
+.header-main .nav-submenu__wrap .nav-submenu-inform .nav-submenu-text {
+  font-family: "Nissan Brand";
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+}
+.header-main .nav-submenu__wrap .nav-submenu-inform a.nav-inform-link {
+  color: #fff;
+  font-weight: 700;
+}
+.header-main .nav-submenu__wrap .nav-submenu-inform .nav-submenu-inform-phone {
+  margin-right: 15px;
+}
+.header-main .nav-submenu__wrap .nav-submenu .nav-submenu__list {
+  display: flex;
+}
+.header-main .nav-submenu__wrap .nav-submenu .nav-submenu__list .nav-submenu__item {
+  margin-right: 10px;
+}
+.header-main .nav-submenu__wrap .nav-submenu .nav-submenu__list .nav-submenu__item a {
+  font-family: "Nissan Brand";
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+}
+.header-main .nav-submenu__wrap .nav-submenu .nav-submenu__list .nav-submenu__item:last-child {
+  margin: 0;
+}
+.header-main .main-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 80px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 49.91%, #000000 100%);
+}
+.header-main .main-menu .menu-inform {
+  display: flex;
+}
+.header-main .main-menu .menu-inform .menu-left {
+  display: flex;
+  flex-direction: column;
+}
+.header-main .main-menu .menu-inform .menu-left .menu-link {
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+.header-main .main-menu .menu-inform .menu-inform-logo {
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+}
+.header-main .main-menu .menu-inform .menu-inform-title {
+  font-family: "Nissan Brand";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 34px;
+  width: 50%;
+}
+.header-main .main-menu .menu-pages {
+  position: relative;
+}
+.header-main .main-menu .menu-pages .menu-list {
+  display: flex;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item {
+  margin-right: 15px;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item a {
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 14px;
+  color: #000;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  display: none;
+  justify-content: space-between;
+  background: #fff;
+  padding: 16px;
+  gap: 15px;
+  width: fit-content;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item {
+  list-style: none;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item a {
+  font-family: "Nissan Brand";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  text-align: left;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item a::after {
+  content: "›";
+  font-family: "Courier New";
+  font-size: 24px;
+  margin-left: 10px;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item:last-child {
+  margin: 0;
+}
+.header-main .design-menu {
+  background: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+}
+.header-main .design-menu .menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.header-main .design-menu .menu-list .menu-item {
+  font-family: "Nissan Brand";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+}
+.header-main .design-menu .menu-list .menu-item a {
+  color: #000;
+}
+.header-main .design-menu .menu-list .active::before {
+  content: "";
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 2em;
+  height: 60%;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  background: #c3002f;
+}
+.header-main .design-menu .menu-list .active::after {
+  content: "";
+  position: absolute;
+  top: 125%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
+  background: #c3002f;
+}
+
+.mobile-design-menu {
+  display: none;
+}
+.mobile-design-menu-active .head-icon {
+  rotate: 180deg;
+}
+.mobile-design-menu-active .menu-list {
+  height: auto !important;
+  padding: 16px !important;
+  border-bottom: 1px solid #d9d9d9;
+  clip-path: inset(0 0% 0% 0) !important;
+  pointer-events: all;
+}
+.mobile-design-menu-active .menu-list .menu-item {
+  padding: 10px 0;
+}
+.mobile-design-menu .head {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 30px 12px 16px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+.mobile-design-menu .head-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.mobile-design-menu .head-icon {
+  transition: rotate 0.3s ease-in-out;
+}
+.mobile-design-menu .menu-list {
+  display: flex;
+  flex-direction: column;
+  padding: 16px !important;
+  overflow: hidden;
+  pointer-events: none;
+  clip-path: inset(0 0% 100% 0);
+  transition: clip-path 0.3s ease-in-out;
+  position: absolute;
+  background: white;
+  left: 0;
+  right: 0;
+}
+.mobile-design-menu .menu-list .menu-item {
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.header-mobile {
+  display: none;
+  color: #000;
+}
+.header-mobile--active {
+  color: #000 !important;
+  background: #fff !important;
+}
+.header-mobile--active.header-mobile-black .menu-inform-logo {
+  filter: invert(1);
+}
+.header-mobile-black {
+  color: #fff;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 12%, #000000 29%);
+}
+.header-mobile-black .menu-button-icon--closed {
+  filter: invert(1);
+}
+.header-mobile .main-menu {
+  padding: 16px 16px 30px;
+  background: none;
+}
+.header-mobile .main-menu .menu-inform {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-mobile .main-menu .menu-inform-logo {
+  margin-right: 12px !important;
+}
+.header-mobile .main-menu .menu-inform-title {
+  font-size: 16px !important;
+  line-height: 100% !important;
+  width: 180px !important;
+}
+.header-mobile .main-menu .menu-button {
+  position: relative;
+  width: 40px;
+  height: 33px;
+}
+.header-mobile .main-menu .menu-button-icon {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.header-mobile .main-menu .menu-button-icon--closed {
+  opacity: 1;
+}
+.header-mobile .main-menu .menu-button-icon--opened {
+  opacity: 0;
+}
+.header-mobile .main-menu .menu-button--active .menu-button-icon--closed {
+  opacity: 0;
+}
+.header-mobile .main-menu .menu-button--active .menu-button-icon--opened {
+  opacity: 1;
+}
+.header-mobile .nav-body {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  inset: 78px 0 0;
+  z-index: 100;
+  background-color: #fff;
+  overflow: scroll;
+  opacity: 0;
+  min-height: 88vh;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.header-mobile .nav-body--active {
+  pointer-events: all;
+  opacity: 1;
+}
+.header-mobile .nav-body .main-list {
+  display: flex;
+  flex-direction: column;
+}
+.header-mobile .nav-body .main-list .dropdown-item {
+  padding: 14px 30px 12px 16px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+.header-mobile .nav-body .main-list .dropdown-item .dropdown-body {
+  height: 0;
+  opacity: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.header-mobile .nav-body .main-list .dropdown-item .dropdown-body .inner-dropdow .inner-body {
+  padding: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+.header-mobile .nav-body .main-list .dropdown-item .dropdown-body .inner-dropdow--active .inner-head-icon {
+  rotate: 180deg;
+}
+.header-mobile .nav-body .main-list .dropdown-item .dropdown-body .inner-dropdow--active .inner-body {
+  display: flex !important;
+  height: 100%;
+  opacity: 1;
+  padding: 10px 5px !important;
+}
+.header-mobile .nav-body .main-list .dropdown-item--active .head-icon {
+  rotate: 180deg;
+}
+.header-mobile .nav-body .main-list .dropdown-item--active .dropdown-body {
+  height: 100%;
+  opacity: 1;
+}
+.header-mobile .nav-body .main-list .dropdown-item .head {
+  display: flex;
+  justify-content: space-between;
+}
+.header-mobile .nav-body .main-list .dropdown-item .head-icon {
+  transition: rotate 0.3s ease-in-out;
+}
+.header-mobile .nav-body .main-list .dropdown-item .inner-list {
+  padding: 10px 0;
+}
+.header-mobile .nav-body .main-list .dropdown-item .inner-list .inner-dropdow .inner-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.header-mobile .nav-body .main-list .dropdown-item .inner-list .inner-dropdow .inner-head-icon {
+  transition: rotate 0.3s ease-in-out;
+}
+.header-mobile .nav-body .main-list .dropdown-item .inner-list .inner-dropdow .inner-body {
+  display: flex;
+  flex-direction: column;
+}
+.header-mobile .nav-body .main-list .dropdown-item .inner-list .inner-dropdow .images-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 22px;
+}
+.header-mobile .nav-body .main-list .dropdown-item .inner-list .inner-dropdow .images-list .image-item {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.header-mobile .nav-body .main-list .dropdown-item .inner-list .inner-dropdow .images-list .image-item__image {
+  width: 100%;
+}
+.header-mobile .nav-body .main-list .dropdown-item .inner-list .inner-dropdow .list-link__item {
+  padding: 5px 0;
+}
+.header-mobile .nav-body .main-list .closed {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.header-mobile .nav-body .link-list {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 16px;
+  background-color: #d9d9d9;
+}
+.header-mobile .nav-body .link-list__item {
+  padding: 10px 0;
+}
+.header-mobile .nav-body .menu-footer {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+.header-mobile .nav-body .menu-footer .socials {
+  display: flex;
+  justify-content: space-between;
+}
+.header-mobile .nav-body .menu-footer .socials_link {
+  width: 40px;
+  height: 40px;
+}
+.header-mobile .nav-body .menu-footer .socials_link-icon {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .header-main {
+    display: none;
+  }
+  .header-mobile {
+    display: block;
+  }
+  .mobile-design-menu {
+    display: block;
+  }
+}
 body {
   font-family: "Nissan Brand";
   font-weight: 400;
   overflow-x: clip;
+}
+@media screen and (max-width: 767px) {
+  body.overflow-hidden {
+    overflow: hidden !important;
+  }
 }
 
 a {
@@ -1970,15 +2146,6 @@ a {
 }
 
 @media (max-width: 767px) {
-  .header-main {
-    display: none;
-  }
-  .header-mobile {
-    display: block;
-  }
-  .mobile-design-menu {
-    display: block;
-  }
   .main-design-section {
     margin-bottom: 60px;
   }

@@ -7,11 +7,18 @@
 @import "./pages/offers.scss";
 
 @import "./components/button.scss";
+@import "./components/header.scss";
 
 body {
   font-family: "Nissan Brand";
   font-weight: 400;
   overflow-x: clip;
+
+  &.overflow-hidden {
+    @include forMobile {
+      overflow: hidden !important;
+    }
+  }
 }
 
 a {
@@ -491,19 +498,6 @@ a {
 
 // Mobile main page
 @media (max-width: 767px) {
-  // tmp
-  .header-main {
-    display: none;
-  }
-
-  .header-mobile {
-    display: block;
-  }
-
-  .mobile-design-menu {
-    display: block;
-  }
-
   .main-design-section {
     margin-bottom: 60px;
     .main-wrap {
