@@ -1,5 +1,12 @@
 @import "_nullstyle.scss";
+
+@import "./utils/font-sizes.scss";
+@import "./utils/mixins.scss";
+
 @import "./pages/home.scss";
+@import "./pages/offers.scss";
+
+@import "./components/button.scss";
 
 body {
   font-family: "Nissan Brand";
@@ -10,6 +17,18 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.upperCase {
+  text-transform: uppercase;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.red {
+  color: #C3002F;
 }
 
 .footer-col__icon,
@@ -486,12 +505,18 @@ a {
   }
 
   .main-design-section {
+    margin-bottom: 60px;
     .main-wrap {
       width: 100%;
       margin-right: 0;
       padding: 0 16px;
     }
   }
+
+	.main-title {
+		font-size: 32px !important;
+		line-height: 110% !important;
+	}
 
   .main-section__second {
     .more-btn {
@@ -587,9 +612,22 @@ a {
   }
 
   .slider-section {
+    .slider-list {
+      display: none;
+    }
     .slider-wrap {
-      width: 85%;
+      width: 100vw;
       height: 200px;
+
+      .slider-prev {
+        opacity: 1;
+        width: 100%;
+
+        .slide {
+          width: 320px;
+          margin: 0 5px;
+        }
+      }
     }
 
     .slider-arrow {

@@ -1,0 +1,17 @@
+@import "./mixins.scss";
+
+.fz {
+  @for $PX from 10 through 100 {
+    &-#{$PX} {
+      font-size: #{$PX}px !important;
+    }
+  }
+  
+  @for $PX from 10 through 100 {
+    &--mobile-#{$PX} {
+      @include forMobile {
+        font-size: #{$PX}px !important;
+      }
+    }
+  }
+}

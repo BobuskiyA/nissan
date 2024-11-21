@@ -29,7 +29,18 @@ $(document).ready(function () {
 		centerMode: false,
 		focusOnSelect: true,
 		nextArrow: document.querySelector('.slick-next'),
-		prevArrow: document.querySelector('.slick-prev') 
+		prevArrow: document.querySelector('.slick-prev'),
+		responsive: [
+			{
+				breakpoint: 764,
+				settings: {
+					slidesToShow: 2,
+					centerMode: true,
+				  variableWidth: true,
+					// infinite: false,
+				}
+			}
+		]
 	});
 
 	// Установка общего количества слайдов
@@ -44,6 +55,10 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
+	$('#mobile-design-menu').on('click', function () {
+    $(this).toggleClass('mobile-design-menu-active');
+  });
+
 	$(".menu-item").hover(
 	function () {
 		$(this).find(".submenu-list").stop(true, true).fadeIn(300).addClass("active");

@@ -1,0 +1,66 @@
+.offers {
+  margin: 40px auto 100px;
+  width: 1170px;
+  
+  @include forMobile {
+    margin: 40px 16px 100px;
+    width: auto;
+  }
+
+  &__title {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .cards-wrapper {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    
+    @include forMobile {
+      gap: 60px;
+    }  
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 358px;
+
+      .top {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .features {
+        margin-top: 10px;
+        
+        &__item {
+          list-style: disc;
+          list-style-position: outside;
+          padding: 4px 0;
+          margin-left: 20px;
+        }
+      }
+
+      .buttons-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+
+        .button {
+          width: fit-content;        
+        }
+      }
+    }
+  }
+
+  .postscript {
+    margin-top: 60px;
+    line-height: 130%;
+    text-align: justify;
+  }
+}
