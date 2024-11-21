@@ -1307,6 +1307,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 50px 80px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 49.91%, #000000 100%);
 }
+.header-main .main-menu-black {
+  color: #fff;
+}
 .header-main .main-menu .menu-inform {
   display: flex;
 }
@@ -1346,7 +1349,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 16px;
   line-height: 14px;
-  color: #000;
 }
 .header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list {
   position: absolute;
