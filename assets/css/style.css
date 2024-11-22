@@ -988,9 +988,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-.section-model .model-wrap .model-list .model-item .model-price-title {
-  margin-bottom: 10px;
-}
 .section-model .model-wrap .model-list .model-item .model-price-title .price-title {
   font-family: "Nissan Brand";
   font-weight: 300;
@@ -1001,7 +998,8 @@ h1, h2, h3, h4, h5, h6 {
 .section-model .model-wrap .model-list .model-item .model-price {
   margin-bottom: 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
 }
 .section-model .model-wrap .model-list .model-item .model-price .price {
   font-family: "Nissan Brand";
@@ -1101,7 +1099,6 @@ h1, h2, h3, h4, h5, h6 {
   background: #000;
 }
 .footer .footer-wrap {
-  width: 75%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 70px;
@@ -1110,7 +1107,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
 }
-.footer .footer-wrap .footer-col .footer-col__title {
+.footer .footer-wrap .footer-col__title {
   font-family: "Nissan Brand";
   font-weight: 400;
   font-size: 15px;
@@ -1134,14 +1131,24 @@ h1, h2, h3, h4, h5, h6 {
 .footer .footer-wrap .footer-col .footer-list .footer-item a {
   color: #fff;
 }
-.footer .footer-wrap .footer-col .footer-social .footer-social__list {
+.footer .footer-wrap .footer-col.footer-contact {
+  width: 250px;
+}
+.footer .footer-wrap .footer-col.footer-contact .footer-social__list {
   display: flex;
+  gap: 20px;
 }
-.footer .footer-wrap .footer-col .footer-social .footer-social__list .footer-social__item {
-  width: 25%;
+.footer .footer-wrap .footer-col.footer-contact .footer-social__item {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease;
 }
-.footer .footer-wrap .footer-col .footer-social .footer-social__list .footer-social__item img {
-  width: 50%;
+.footer .footer-wrap .footer-col.footer-contact .footer-social__item:hover {
+  opacity: 0.5;
+}
+.footer .footer-wrap .footer-col.footer-contact .footer-social__item-icon {
+  width: 100%;
+  height: 100%;
 }
 
 .offers {
@@ -1303,11 +1310,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header-main .main-menu {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 50px 80px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 49.91%, #000000 100%);
+  padding: 30px 80px;
 }
 .header-main .main-menu-black {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 49.91%, #000000 100%);
   color: #fff;
 }
 .header-main .main-menu .menu-inform {
@@ -1388,7 +1396,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 0;
 }
 .header-main .design-menu .menu-list {
   display: flex;
@@ -1396,6 +1403,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 40px;
 }
 .header-main .design-menu .menu-list .menu-item {
+  padding: 12px 0;
   font-family: "Nissan Brand";
   font-weight: 300;
   font-size: 14px;
@@ -1408,23 +1416,23 @@ h1, h2, h3, h4, h5, h6 {
 .header-main .design-menu .menu-list .active::before {
   content: "";
   position: absolute;
-  top: 125%;
+  top: 99%;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 2em;
-  height: 60%;
+  width: 0.9em;
+  height: 15%;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   background: #c3002f;
 }
 .header-main .design-menu .menu-list .active::after {
   content: "";
   position: absolute;
-  top: 125%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
+  top: 100%;
+  left: -1px;
+  right: -1px;
+  height: 3px;
   background: #c3002f;
+  transform: translateY(-100%);
 }
 
 .mobile-design-menu {
@@ -1482,6 +1490,9 @@ h1, h2, h3, h4, h5, h6 {
 .header-mobile--active {
   color: #000 !important;
   background: #fff !important;
+}
+.header-mobile--active.header-mobile-black .main-menu-black {
+  color: #000;
 }
 .header-mobile--active.header-mobile-black .menu-inform-logo {
   filter: invert(1);
@@ -1542,7 +1553,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   overflow: scroll;
   opacity: 0;
-  min-height: 88vh;
+  min-height: calc(100vh - 78px);
   pointer-events: none;
   transition: all 0.3s ease-in-out;
 }
@@ -1703,6 +1714,18 @@ a {
   color: #C3002F;
 }
 
+.container {
+  width: 85%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+}
+
 .footer-col__icon,
 .car-info-mobile__image {
   display: none;
@@ -1802,8 +1825,7 @@ a {
   line-height: 18px;
 }
 .main-design-section .main-wrap {
-  width: 50%;
-  margin-right: 20%;
+  width: 70%;
 }
 .main-design-section .main-wrap .main-under-title {
   font-weight: 400;
@@ -1814,7 +1836,7 @@ a {
 .main-design-section .main-wrap .main-title {
   font-family: "Nissan Brand";
   font-weight: 400;
-  font-size: 64px;
+  font-size: 42px;
   line-height: 110%;
   margin-bottom: 20px;
 }
@@ -1842,8 +1864,13 @@ a {
   align-items: start;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 767px) {
+  .slider-section {
+    width: 100% !important;
+  }
+}
 .slider-section .slider-wrap {
-  width: 75%;
+  width: 100%;
   overflow: hidden;
   display: flex;
   gap: 20px;
@@ -1894,7 +1921,7 @@ a {
   top: 110%;
 }
 .slider-section .slider-row {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
 }
@@ -1931,23 +1958,20 @@ a {
 }
 .slider-section .slider-row .slider-col .slider-dots .slick-dots {
   display: flex;
-  gap: 90px;
-}
-.slider-section .slider-row .slider-col .slider-dots .slick-dots .slick-active {
-  width: 100%;
+  gap: 20px;
 }
 .slider-section .slider-row .slider-col .slider-dots .slick-dots .slick-active .dots-line {
-  width: 100%;
-  height: 2px;
   background-color: #000;
 }
 .slider-section .slider-row .slider-col .slider-dots .slick-dots li {
-  width: 100%;
+  width: 90px;
+  height: 2px;
 }
 .slider-section .slider-row .slider-col .slider-dots .slick-dots li .dots-line {
   width: 100%;
-  height: 2px;
+  height: 100%;
   background-color: #acacac;
+  transition: background-color 0.3s ease;
 }
 .slider-section .slider-row .slider-col .slider-arrow {
   position: relative;
@@ -1959,9 +1983,10 @@ a {
   right: 5%;
 }
 
-.inform-section {
-  width: 75%;
-  margin: 0 auto;
+.personal-inform, .universal-inform {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .inform-margin {
@@ -1981,7 +2006,6 @@ a {
   font-weight: 400;
   font-size: 42px;
   line-height: 48px;
-  margin-bottom: 40px;
 }
 
 .head-inform-img {
@@ -1997,6 +2021,14 @@ a {
   width: 48%;
   display: flex;
   align-items: center;
+}
+.row-inform .col-inform.col-first-paddind {
+  padding-right: 10%;
+}
+@media screen and (max-width: 767px) {
+  .row-inform .col-inform.col-first-paddind {
+    padding-right: 0;
+  }
 }
 .row-inform .col-inform > img {
   width: 100%;
@@ -2029,11 +2061,6 @@ a {
   flex-direction: row-reverse;
 }
 
-.inform-wrap {
-  width: 75%;
-  margin: 0 auto;
-}
-
 .connect-section .head-inform {
   margin-bottom: 40px;
 }
@@ -2042,8 +2069,7 @@ a {
   margin-bottom: 80px;
 }
 .connect-section .blog-list {
-  width: 75%;
-  margin: 0 auto 80px;
+  margin-bottom: 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -2052,6 +2078,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: start;
+  height: fit-content;
 }
 .connect-section .blog-list .blog-item .blog-img__wrap {
   margin-bottom: 20px;
@@ -2080,8 +2107,7 @@ a {
   margin-bottom: 40px;
 }
 .mobility-section .blog-list {
-  width: 75%;
-  margin: 0 auto 80px;
+  margin-bottom: 80px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -2117,16 +2143,14 @@ a {
 }
 
 .personal-section {
-  width: 75%;
-  margin: 0 auto 80px;
+  margin-bottom: 80px;
 }
 .personal-section .head-inform {
   margin-bottom: 40px;
 }
 
 .more-section {
-  width: 75%;
-  margin: 0 auto 80px;
+  margin-bottom: 80px;
 }
 .more-section .more-title {
   font-family: "Nissan Brand";
@@ -2327,12 +2351,6 @@ a {
   .blog-list {
     display: flex !important;
     flex-direction: column;
-    width: 100% !important;
-    padding: 0 16px;
-  }
-  .personal-section, .inform-wrap, .inform-section {
-    width: 100% !important;
-    padding: 0 16px;
   }
   .mobility-section .head-inform,
   .mobility-section .inform-wrap {

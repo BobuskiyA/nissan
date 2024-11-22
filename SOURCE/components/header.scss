@@ -41,16 +41,17 @@
   }
   .main-menu {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 50px 80px;
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.5) 49.91%,
-      #000000 100%
-    );
-
+    padding: 30px 80px;
+    
     &-black {
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.5) 49.91%,
+        #000000 100%
+      );
       color: #fff;
     }
 
@@ -135,12 +136,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px 0;
     .menu-list {
       display: flex;
       justify-content: center;
       gap: 40px;
       .menu-item {
+        padding: 12px 0;
         font-family: "Nissan Brand";
         font-weight: 300;
         font-size: 14px;
@@ -153,23 +154,23 @@
       .active::before {
         content: "";
         position: absolute;
-        top: 125%;
+        top: 99%;
         left: 50%;
         transform: translate(-50%, 0);
-        width: 2em;
-        height: 60%;
+        width: 0.9em;
+        height: 15%;
         clip-path: polygon(50% 100%, 0 0, 100% 0);
         background: #c3002f;
       }
       .active::after {
         content: "";
         position: absolute;
-        top: 125%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
+        top: 100%;
+        left: -1px;
+        right: -1px;
+        height: 3px;
         background: #c3002f;
+        transform: translateY(-100%);
       }
     }
   }
@@ -249,6 +250,9 @@
     background: #fff !important;
 
     &.header-mobile-black {
+      .main-menu-black {
+        color: #000;
+      }
       .menu-inform-logo {
         filter: invert(1);
       }
@@ -335,7 +339,7 @@
     background-color: #fff;
     overflow: scroll;
     opacity: 0;
-    min-height: 88vh;
+    min-height: calc(100vh - 78px);
 
     pointer-events: none;
 

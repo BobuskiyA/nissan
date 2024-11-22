@@ -218,7 +218,6 @@
           }
         }
         .model-price-title {
-          margin-bottom: 10px;
           .price-title {
             font-family: "Nissan Brand";
             font-weight: 300;
@@ -230,7 +229,8 @@
         .model-price {
           margin-bottom: 20px;
           display: flex;
-          justify-content: space-between;
+          flex-direction: column;
+          gap: 10px;
           .price {
             font-family: "Nissan Brand";
             font-weight: 400;
@@ -333,14 +333,14 @@
   padding: 40px 0 100px;
   background: #000;
   .footer-wrap {
-    width: 75%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 70px;
     .footer-col {
       display: flex;
       flex-direction: column;
-      .footer-col__title {
+
+      &__title {
         font-family: "Nissan Brand";
         font-weight: 400;
         font-size: 15px;
@@ -348,6 +348,7 @@
         margin-bottom: 20px;
         color: #fff;
       }
+
       .footer-list {
         display: flex;
         flex-direction: column;
@@ -364,13 +365,27 @@
           }
         }
       }
-      .footer-social {
-        .footer-social__list {
-          display: flex;
-          .footer-social__item {
-            width: 25%;
-            img {
-              width: 50%;
+
+      &.footer-contact {
+        width: 250px;
+
+        .footer-social {
+          &__list {
+            display: flex;
+            gap: 20px;
+          }
+          &__item {
+            width: 24px;
+            height: 24px;
+            transition: opacity .3s ease;
+
+            &:hover {
+              opacity: 0.5;
+            }
+
+            &-icon {
+              width: 100%;
+              height: 100%;
             }
           }
         }
@@ -378,4 +393,3 @@
     }
   }
 }
-
