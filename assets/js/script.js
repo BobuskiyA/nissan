@@ -100,3 +100,9 @@ $(document).ready(function() {
     $('body').toggleClass('overflow-hidden');
   });
 });
+
+$(document).ready(function() {
+  $('.prices .cards-wrapper #prices-dropdown .head').click(function() {
+    $(this).closest('#prices-dropdown').toggleClass('dropdown--active');
+  });
+});

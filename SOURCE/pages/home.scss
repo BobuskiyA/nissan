@@ -361,7 +361,12 @@
           line-height: 16px;
           color: #fff;
           a {
-            color: #fff;
+            color: #ACACAC;
+            transition: color .3s ease;
+
+            &:hover {
+              color: #fff;
+            }
           }
         }
       }

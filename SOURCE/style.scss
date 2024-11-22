@@ -5,6 +5,7 @@
 
 @import "./pages/home.scss";
 @import "./pages/offers.scss";
+@import "./pages/prices.scss";
 
 @import "./components/button.scss";
 @import "./components/header.scss";
@@ -30,12 +31,23 @@ a {
   text-transform: uppercase;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .light {
   font-weight: 300;
 }
 
 .red {
   color: #C3002F;
+}
+
+.list-styles {
+  list-style: disc;
+  list-style-position: outside;
+  padding: 4px 0;
+  margin-left: 20px;
 }
 
 .container {
