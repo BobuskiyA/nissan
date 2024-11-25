@@ -80,69 +80,7 @@
 
     .bottom {
       margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
 
-      .dropdown {
-        background-color: #eaeaea;
-
-        &--active {
-          .head {
-            background-color: #cacaca !important;
-
-            svg {
-              rotate: 45deg;
-            }
-          }
-
-          .body {
-            padding: 26px 56px 36px !important;
-            max-height: 300vh !important;
-            
-            transition: max-height 1s ease, padding .01s ease !important;
-            
-            @include forMobile {
-              padding: 26px 16px 36px !important;
-              max-height: 500vh !important;
-            }    
-          }
-        }
-
-        .head {
-          padding: 16px 20px;
-          display: flex;
-          justify-content: space-between;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-
-          &:hover {
-            background-color: #cacaca;
-          }
-
-          svg {
-            transition: rotate .3s ease;
-          }
-        }
-
-        .body {
-          padding: 0;
-          max-height: 0vh;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-          gap: 26px;
-
-          transition: max-height 1s ease, padding .01s .8s ease;
-
-          .list {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            margin-top: 10px;
-          }
-        }
-      }
     }
   }
 

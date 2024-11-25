@@ -1290,57 +1290,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .prices .cards-wrapper .bottom {
   margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.prices .cards-wrapper .bottom .dropdown {
-  background-color: #eaeaea;
-}
-.prices .cards-wrapper .bottom .dropdown--active .head {
-  background-color: #cacaca !important;
-}
-.prices .cards-wrapper .bottom .dropdown--active .head svg {
-  rotate: 45deg;
-}
-.prices .cards-wrapper .bottom .dropdown--active .body {
-  padding: 26px 56px 36px !important;
-  max-height: 300vh !important;
-  transition: max-height 1s ease, padding 0.01s ease !important;
-}
-@media screen and (max-width: 767px) {
-  .prices .cards-wrapper .bottom .dropdown--active .body {
-    padding: 26px 16px 36px !important;
-    max-height: 500vh !important;
-  }
-}
-.prices .cards-wrapper .bottom .dropdown .head {
-  padding: 16px 20px;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.prices .cards-wrapper .bottom .dropdown .head:hover {
-  background-color: #cacaca;
-}
-.prices .cards-wrapper .bottom .dropdown .head svg {
-  transition: rotate 0.3s ease;
-}
-.prices .cards-wrapper .bottom .dropdown .body {
-  padding: 0;
-  max-height: 0vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-  transition: max-height 1s ease, padding 0.01s 0.8s ease;
-}
-.prices .cards-wrapper .bottom .dropdown .body .list {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 10px;
 }
 .prices__under-text {
   margin-top: 60px;
@@ -1514,6 +1463,168 @@ h1, h2, h3, h4, h5, h6 {
 }
 .post-inner .more-section {
   margin-top: 60px;
+}
+
+.finance-offers {
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+.finance-offers__title {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .finance-offers__title {
+    width: 100%;
+  }
+}
+.finance-offers .navigation {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.finance-offers .navigation__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.finance-offers .navigation__link svg {
+  stroke: #acacac;
+}
+.finance-offers .navigation__link--active svg {
+  stroke: #c3002f;
+}
+.finance-offers .offers-section {
+  margin-top: 40px;
+}
+.finance-offers .offers-section__title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.finance-offers .offers-section .image-cards {
+  margin-top: 40px;
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  .finance-offers .offers-section .image-cards {
+    flex-direction: column;
+  }
+}
+.finance-offers .offers-section .image-cards .card {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .finance-offers .offers-section .image-cards .card {
+    width: 100%;
+  }
+}
+.finance-offers .offers-section .table {
+  width: 100%;
+  color: #666666;
+  margin-top: 40px;
+}
+.finance-offers .offers-section .table tbody tr td {
+  padding: 10px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+@media screen and (max-width: 767px) {
+  .finance-offers .offers-section .table tbody tr td {
+    padding: 9px 9px;
+    border-bottom: none;
+    border-right: 1px solid #d9d9d9;
+  }
+  .finance-offers .offers-section .table tbody tr td:nth-of-type(1) {
+    padding: 9px 9px 9px 0;
+  }
+  .finance-offers .offers-section .table tbody tr td:nth-last-of-type(1) {
+    border: none;
+  }
+}
+.finance-offers .offers-section .table__secondary .rotated-text {
+  writing-mode: vertical-rl; /* Ensure text flows vertically */
+  text-align: center; /* Align the text */
+  white-space: nowrap; /* Prevent text wrapping */
+  width: 20px; /* Adjust as needed for layout */
+  vertical-align: middle; /* Align with other rows */
+}
+@media screen and (max-width: 767px) {
+  .finance-offers .offers-section .table__secondary .rotated-text {
+    padding: 0 10px !important;
+    border-bottom: none;
+    border-right: none;
+    border-left: 1px solid #d9d9d9;
+    rotate: 180deg;
+  }
+}
+@media screen and (max-width: 767px) {
+  .finance-offers .offers-section .table__secondary tbody tr td {
+    padding: 15px 9px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .finance-offers .offers-section .table__secondary tbody .head td {
+    padding: 4px 9px !important;
+    border-bottom: 1px solid #d9d9d9 !important;
+  }
+}
+.finance-offers .offers-section__subtitle {
+  margin-top: 40px;
+  text-align: center;
+}
+.finance-offers .offers-section__list {
+  margin-top: 40px;
+  padding-left: 15px;
+}
+.finance-offers .offers-section__list-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.finance-offers .offers-section.image-section {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+  .finance-offers .offers-section.image-section {
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+.finance-offers .offers-section.image-section .image-section__image {
+  width: 540px;
+  height: 270px;
+}
+@media screen and (max-width: 767px) {
+  .finance-offers .offers-section.image-section .image-section__image {
+    width: 100%;
+    height: auto;
+    max-height: 270px;
+  }
+}
+.finance-offers .offers-section.image-section .image-section__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 40px;
+}
+.finance-offers .offers-section.image-section .image-section__text .button {
+  width: fit-content;
+  margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .finance-offers .offers-section.image-section .image-section__text .button {
+    margin-top: 0px;
+  }
 }
 
 .button .more-btn {
@@ -2019,6 +2130,62 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
 }
+.dropdown {
+  background-color: #eaeaea;
+}
+.dropdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.dropdown--active .head {
+  background-color: #cacaca !important;
+}
+.dropdown--active .head svg {
+  rotate: 45deg;
+}
+.dropdown--active .body {
+  padding: 26px 56px 36px !important;
+  max-height: 300vh !important;
+  transition: max-height 1s ease, padding 0.01s ease !important;
+}
+@media screen and (max-width: 767px) {
+  .dropdown--active .body {
+    padding: 26px 16px 36px !important;
+    max-height: 500vh !important;
+  }
+}
+.dropdown .head {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.dropdown .head:hover {
+  background-color: #cacaca;
+}
+.dropdown .head svg {
+  transition: rotate 0.3s ease;
+}
+.dropdown .body {
+  padding: 0;
+  max-height: 0vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  transition: max-height 1s ease, padding 0.01s 0.8s ease;
+}
+.dropdown .body .list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
 body {
   font-family: "Nissan Brand";
   font-weight: 400;
@@ -2045,6 +2212,29 @@ a {
 
 .light {
   font-weight: 300;
+}
+
+.lh-150 {
+  line-height: 150%;
+}
+
+.justify {
+  text-align: justify;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-hiden {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .mobile-only {
+    display: block;
+  }
 }
 
 .red {

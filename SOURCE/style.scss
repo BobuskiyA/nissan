@@ -8,9 +8,11 @@
 @import "./pages/prices.scss";
 @import "./pages/posts.scss";
 @import "./pages/postInner.scss";
+@import "./pages/finance-offers.scss";
 
 @import "./components/button.scss";
 @import "./components/header.scss";
+@import "./components/dropdown.scss";
 
 body {
   font-family: "Nissan Brand";
@@ -39,6 +41,28 @@ a {
 
 .light {
   font-weight: 300;
+}
+
+.lh-150 {
+  line-height: 150%;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.mobile-hiden {
+  @include forMobile {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+
+  @include forMobile {
+    display: block;
+  }
 }
 
 .red {

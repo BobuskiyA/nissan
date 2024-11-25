@@ -102,7 +102,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $('.prices .cards-wrapper #prices-dropdown .head').click(function() {
-    $(this).closest('#prices-dropdown').toggleClass('dropdown--active');
+  $('#main-dropdown .head').click(function() {
+    $(this).closest('#main-dropdown').toggleClass('dropdown--active');
   });
 });
