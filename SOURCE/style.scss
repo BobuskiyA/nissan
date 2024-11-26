@@ -144,11 +144,10 @@ a {
 .model-more-btn-price {
   .more-btn {
     display: block;
-    padding: 15px;
+    padding: 15px 30px;
     width: 100%;
     background: #000;
     border-radius: 40px;
-    font-family: "Inter";
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
@@ -651,6 +650,10 @@ a {
             }
             .price-text {
               margin-top: 5%;
+              text-transform: none;
+              @include forMobile {
+                margin-top: 0;
+              }
             }
           }
         }
@@ -720,14 +723,13 @@ a {
             width: 100%;
             padding: 0;
             margin-top: 5%;
+
             .inform-text {
               font-size: 14px;
-              margin-bottom: 5%;
             }
             .inform-title {
               font-size: 20px;
               line-height: 26px;
-              font-weight: 400px;
             }
           }
         }

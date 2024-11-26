@@ -2,26 +2,6 @@
   .header-main {
     position: absolute;
     z-index: 10;
-
-    .menu-inform {
-      align-items: center;
-
-      &-logo {
-        width: 70px;
-        height: 60px;
-        margin-right: 20px !important;
-
-        @include forMobile {
-          width: 102px;
-          height: 14px;
-        }
-
-        & > a img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
   }
 
   .content {

@@ -50,6 +50,10 @@
         color: #000;
         margin-bottom: 40px;
         text-transform: uppercase;
+
+        @include forMobile {
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -277,6 +281,7 @@
           flex-direction: column;
           justify-content: center;
           align-items: start;
+          gap: 10px;
           width: 50%;
           padding: 0 40px;
           .inform-title {
@@ -294,7 +299,7 @@
             font-size: 14px;
             line-height: 24px;
             letter-spacing: 1px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
           }
           .inform-more {
             font-family: "Nissan Brand";
