@@ -48,6 +48,61 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  const splide = new Splide(".splide", {
+    perPage: 3,
+    perMove: 1,
+    start: 1,
+    focus: "center",
+    trimSpace: false,
+    arrows: false,
+    classes: {
+      pagination: 'slider-pagination',
+      page: 'slider-page'
+    },
+    responsive: [
+      {
+        breakpoint: 764,
+        settings: {
+          perPage: 1,
+          variableWidth: true,
+        },
+      },
+    ],
+  });
+
+  splide.mount();
+
+  // Custom navigation arrows
+  $(".slick-prev").on("click", () => splide.go("<"));
+  $(".slick-next").on("click", () => splide.go(">"));
+
+  // Custom pagination
+  const totalSlides = splide.Components.Slides.getLength();
+  const paginationContainer = $(".slider-dots");
+
+  for (let i = 0; i < totalSlides; i++) {
+    // Create and append a dot
+    const dot = $(`<button class="dots-line" data-index="${i}"></button>`);
+    paginationContainer.append(dot);
+  }
+
+  // Add click event for custom dots
+  $(".dots-line").on("click", function () {
+    const index = $(this).data("index");
+    splide.go(index);
+  });
+
+  // Update active dot on slide move
+  splide.on("move", (newIndex) => {
+    $(".dots-line").removeClass("active");
+    $(`.slider-dot[data-index="${newIndex}"]`).addClass("active");
+  });
+
+  // Set the first dot as active
+  $(".dots-line").first().addClass("active");
+});
+
+$(document).ready(function () {
   $("#mobile-design-menu").on("click", function () {
     $(this).toggleClass("mobile-design-menu-active");
   });
@@ -70,39 +125,37 @@ $(document).ready(function () {
   );
 });
 
-$(document).ready(function() {
-  // Toggle main dropdown items
-  $('.dropdown-item .head').click(function() {
-    // Toggle active class on parent dropdown-item
-    $(this).closest('.dropdown-item').toggleClass('dropdown-item--active');
-    
-    // Close other dropdown items
-    $(this).closest('.dropdown-item').siblings('.dropdown-item').removeClass('dropdown-item--active');
+$(document).ready(function () {
+  $(".dropdown-item .head").click(function () {
+    $(this).closest(".dropdown-item").toggleClass("dropdown-item--active");
+
+    $(this)
+      .closest(".dropdown-item")
+      .siblings(".dropdown-item")
+      .removeClass("dropdown-item--active");
   });
 
-  // Toggle inner dropdown
-  $('.inner-head').click(function() {
-    // Toggle active class on parent inner-dropdown
-    $(this).closest('.inner-dropdow').toggleClass('inner-dropdow--active');
-    
-    // Close other inner dropdowns in the same list
-    $(this).closest('.inner-list').find('.inner-dropdow').not($(this).closest('.inner-dropdow')).removeClass('inner-dropdow--active');
+  $(".inner-head").click(function () {
+    $(this).closest(".inner-dropdow").toggleClass("inner-dropdow--active");
+
+    $(this)
+      .closest(".inner-list")
+      .find(".inner-dropdow")
+      .not($(this).closest(".inner-dropdow"))
+      .removeClass("inner-dropdow--active");
   });
 
-  // Toggle mobile menu
-  $('.menu-button').click(function() {
-    // Toggle nav-body active class
-    $('.nav-body').toggleClass('nav-body--active');
-    $('.menu-button').toggleClass('menu-button--active');
-    $('.header-mobile').toggleClass('header-mobile--active');
-    
-    // Toggle body overflow
-    $('body').toggleClass('overflow-hidden');
+  $(".menu-button").click(function () {
+    $(".nav-body").toggleClass("nav-body--active");
+    $(".menu-button").toggleClass("menu-button--active");
+    $(".header-mobile").toggleClass("header-mobile--active");
+
+    $("body").toggleClass("overflow-hidden");
   });
 });
 
-$(document).ready(function() {
-  $('#main-dropdown .head').click(function() {
-    $(this).closest('#main-dropdown').toggleClass('dropdown--active');
+$(document).ready(function () {
+  $("#main-dropdown .head").click(function () {
+    $(this).closest("#main-dropdown").toggleClass("dropdown--active");
   });
 });
