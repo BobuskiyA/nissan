@@ -1,0 +1,66 @@
+.prices-offers {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  
+  @include forMobile {
+    margin-top: 40px;
+  }
+  
+  &-page {
+    margin-bottom: 100px;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .element {
+    display: flex;
+    gap: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    @include forMobile {
+      flex-direction: column;
+      width: 100%;
+      gap: 30px;
+    }
+
+    &__image {
+      width: 585px;
+      height: 265px;
+
+      @include forMobile {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-about {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include forMobile {
+        gap: 20px;
+      }
+    }
+
+    .buttons-wrapper {
+      display: flex;
+      gap: 20px;
+
+      @include forMobile {
+        flex-direction: column;
+        gap: 10px;
+
+        .button {
+          width: fit-content;
+        }
+      }
+    }
+  }
+}

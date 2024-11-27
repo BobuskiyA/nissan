@@ -1556,6 +1556,136 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.offers-section {
+  margin-top: 40px;
+}
+.offers-section__title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.offers-section .image-cards {
+  margin-top: 40px;
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  .offers-section .image-cards {
+    flex-direction: column;
+  }
+}
+.offers-section .image-cards .card {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .offers-section .image-cards .card {
+    width: 100%;
+  }
+}
+.offers-section .table {
+  width: 100%;
+  color: #666666;
+  margin-top: 40px;
+}
+.offers-section .table tbody tr td {
+  padding: 10px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+@media screen and (max-width: 767px) {
+  .offers-section .table tbody tr td {
+    padding: 9px 9px;
+    border-bottom: none;
+    border-right: 1px solid #d9d9d9;
+  }
+  .offers-section .table tbody tr td:nth-of-type(1) {
+    padding: 9px 9px 9px 0;
+  }
+  .offers-section .table tbody tr td:nth-last-of-type(1) {
+    border: none;
+  }
+}
+.offers-section .table__secondary .rotated-text {
+  writing-mode: vertical-rl; /* Ensure text flows vertically */
+  text-align: center; /* Align the text */
+  white-space: nowrap; /* Prevent text wrapping */
+  width: 20px; /* Adjust as needed for layout */
+  vertical-align: middle; /* Align with other rows */
+}
+@media screen and (max-width: 767px) {
+  .offers-section .table__secondary .rotated-text {
+    padding: 0 10px !important;
+    border-bottom: none;
+    border-right: none;
+    border-left: 1px solid #d9d9d9;
+    rotate: 180deg;
+  }
+}
+@media screen and (max-width: 767px) {
+  .offers-section .table__secondary tbody tr td {
+    padding: 15px 9px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .offers-section .table__secondary tbody .head td {
+    padding: 4px 9px !important;
+    border-bottom: 1px solid #d9d9d9 !important;
+  }
+}
+.offers-section__subtitle {
+  margin-top: 40px;
+  text-align: center;
+}
+.offers-section__list {
+  margin-top: 40px;
+  padding-left: 15px;
+}
+.offers-section__list-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.offers-section.image-section {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+  .offers-section.image-section {
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+.offers-section.image-section .image-section__image {
+  width: 540px;
+  height: 270px;
+}
+@media screen and (max-width: 767px) {
+  .offers-section.image-section .image-section__image {
+    width: 100%;
+    height: auto;
+    max-height: 270px;
+  }
+}
+.offers-section.image-section .image-section__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 40px;
+}
+.offers-section.image-section .image-section__text .button {
+  width: fit-content;
+  margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .offers-section.image-section .image-section__text .button {
+    margin-top: 0px;
+  }
+}
+
 .model-details .header-main {
   position: absolute;
   z-index: 10;
@@ -2095,6 +2225,71 @@ h1, h2, h3, h4, h5, h6 {
 }
 .shop-inner .more-section {
   margin-top: 60px;
+}
+
+.prices-offers {
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 767px) {
+  .prices-offers {
+    margin-top: 40px;
+  }
+}
+.prices-offers-page {
+  margin-bottom: 100px;
+}
+.prices-offers .title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+.prices-offers .element {
+  display: flex;
+  gap: 10px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 767px) {
+  .prices-offers .element {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+}
+.prices-offers .element__image {
+  width: 585px;
+  height: 265px;
+}
+@media screen and (max-width: 767px) {
+  .prices-offers .element__image {
+    width: 100%;
+    height: auto;
+  }
+}
+.prices-offers .element-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .prices-offers .element-about {
+    gap: 20px;
+  }
+}
+.prices-offers .element .buttons-wrapper {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .prices-offers .element .buttons-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .prices-offers .element .buttons-wrapper .button {
+    width: fit-content;
+  }
 }
 
 .item-page {
