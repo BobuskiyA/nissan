@@ -1,0 +1,56 @@
+.item-page-list.cars-shop {
+  .card {
+    padding: 16px 16px 16px 0;
+    gap: 10px;
+
+    @include forMobile {
+      padding: 16px;
+    }
+
+    &__image {
+      width: 312px;
+      height: 216px;
+      object-fit: contain;
+
+      @include forMobile {
+        width: 100%;
+      }
+    }
+
+    .specs {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3px;
+      width: 80%;
+
+      color: #666666;
+
+      @include forMobile {
+      width: 60%;
+      margin-top: 10px;
+      }  
+
+      &__text {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+      }
+    }
+
+    .text {
+      @include forMobile {
+        width: 100%;
+      }  
+    }
+
+    .button {
+      margin-top: 10px;
+      .more-btn {
+        padding: 8px 20px;
+        gap: 40px;
+      }
+    }
+  }
+}

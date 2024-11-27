@@ -10,45 +10,6 @@
     text-align: center;
   }
 
-  .filter {
-    margin-top: 60px;
-
-    @include forMobile {
-      margin-top: 20px;
-    }
-
-    &-list {
-      margin-top: 10px;
-      display: flex;
-      gap: 10px;
-    }
-
-    &__button {
-      background-color: #000;
-      color: #fff;
-      padding: 5px 20px;
-      border-radius: 100px;
-      border: 1px solid #000;
-      transition: 0.3s ease;
-      transition-property: background-color color;
-      line-height: 90%;
-
-      @include forMobile {
-        padding: 5px 14px;
-      }
-
-      &:hover {
-        background-color: #fff;
-        color: #000;
-      }
-
-      &--active {
-        background-color: #fff !important;
-        color: #000 !important;
-      }
-    }
-  }
-
   &__list {
     display: flex;
     flex-wrap: wrap;

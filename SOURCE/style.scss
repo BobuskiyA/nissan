@@ -10,10 +10,15 @@
 @import "./pages/postInner.scss";
 @import "./pages/finance-offers.scss";
 @import "./pages/modelDetails.scss";
+@import "./pages/cars-shop.scss";
+@import "./pages/shopInner.scss";
 
+@import "./components/item-page.scss";
 @import "./components/button.scss";
 @import "./components/header.scss";
 @import "./components/dropdown.scss";
+@import "./components/filter.scss";
+@import "./components/breadcrumbs.scss";
 
 body {
   font-family: "Nissan Brand";
@@ -68,6 +73,10 @@ a {
 
 .red {
   color: #C3002F;
+}
+
+.shadow {
+  color: #666666;
 }
 
 .list-styles {

@@ -1310,42 +1310,6 @@ h1, h2, h3, h4, h5, h6 {
 .posts__title {
   text-align: center;
 }
-.posts .filter {
-  margin-top: 60px;
-}
-@media screen and (max-width: 767px) {
-  .posts .filter {
-    margin-top: 20px;
-  }
-}
-.posts .filter-list {
-  margin-top: 10px;
-  display: flex;
-  gap: 10px;
-}
-.posts .filter__button {
-  background-color: #000;
-  color: #fff;
-  padding: 5px 20px;
-  border-radius: 100px;
-  border: 1px solid #000;
-  transition: 0.3s ease;
-  transition-property: background-color color;
-  line-height: 90%;
-}
-@media screen and (max-width: 767px) {
-  .posts .filter__button {
-    padding: 5px 14px;
-  }
-}
-.posts .filter__button:hover {
-  background-color: #fff;
-  color: #000;
-}
-.posts .filter__button--active {
-  background-color: #fff !important;
-  color: #000 !important;
-}
 .posts__list {
   display: flex;
   flex-wrap: wrap;
@@ -1408,44 +1372,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 6px;
   height: 12px;
   margin-top: 3px;
-}
-
-.breadcrumbs {
-  width: 100vw;
-  background-color: #EAEAEA;
-  padding: 12px 0;
-  overflow: hidden;
-}
-.breadcrumbs-list {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-@media screen and (max-width: 767px) {
-  .breadcrumbs-list {
-    flex-wrap: wrap;
-  }
-}
-.breadcrumbs__link {
-  display: flex;
-  gap: 20px;
-  color: #666666;
-}
-.breadcrumbs__link a {
-  transition: color 0.3s ease;
-}
-.breadcrumbs__link a:hover {
-  color: #000;
-}
-.breadcrumbs__name {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-@media screen and (max-width: 767px) {
-  .breadcrumbs__name {
-    width: 70%;
-  }
 }
 
 .post-inner {
@@ -2002,6 +1928,263 @@ h1, h2, h3, h4, h5, h6 {
   .model-details .features .card .text .button__wrapper {
     flex-direction: column;
   }
+}
+
+.item-page-list.cars-shop .card {
+  padding: 16px 16px 16px 0;
+  gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  .item-page-list.cars-shop .card {
+    padding: 16px;
+  }
+}
+.item-page-list.cars-shop .card__image {
+  width: 312px;
+  height: 216px;
+  object-fit: contain;
+}
+@media screen and (max-width: 767px) {
+  .item-page-list.cars-shop .card__image {
+    width: 100%;
+  }
+}
+.item-page-list.cars-shop .card .specs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+  width: 80%;
+  color: #666666;
+}
+@media screen and (max-width: 767px) {
+  .item-page-list.cars-shop .card .specs {
+    width: 60%;
+    margin-top: 10px;
+  }
+}
+.item-page-list.cars-shop .card .specs__text {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+@media screen and (max-width: 767px) {
+  .item-page-list.cars-shop .card .text {
+    width: 100%;
+  }
+}
+.item-page-list.cars-shop .card .button {
+  margin-top: 10px;
+}
+.item-page-list.cars-shop .card .button .more-btn {
+  padding: 8px 20px;
+  gap: 40px;
+}
+
+.shop-inner {
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+.shop-inner .container {
+  margin-top: 60px;
+}
+.shop-inner__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 767px) {
+  .shop-inner__title {
+    margin-bottom: 40px;
+  }
+}
+.shop-inner .text {
+  line-height: 150%;
+}
+.shop-inner .prices-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .shop-inner .prices-section {
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+  }
+}
+.shop-inner .prices-section .buttons-wrapper {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .shop-inner .prices-section .buttons-wrapper {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+}
+.shop-inner .prices-section .buttons-wrapper .button {
+  min-width: 280px;
+}
+@media screen and (max-width: 767px) {
+  .shop-inner .prices-section .buttons-wrapper .button {
+    min-width: 100%;
+  }
+}
+.shop-inner .categories {
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .shop-inner .categories {
+    padding: 0 30px;
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
+}
+.shop-inner .categories__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .shop-inner .categories__item {
+    flex-direction: column;
+    gap: 5px;
+    width: 130px;
+    text-align: center;
+  }
+}
+.shop-inner .tech-specs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 114px;
+  margin-top: 40px;
+}
+.shop-inner .tech-specs-list .card {
+  width: 314px;
+}
+@media screen and (max-width: 767px) {
+  .shop-inner .tech-specs-list .card {
+    width: 100%;
+  }
+}
+.shop-inner .tech-specs-list .card .head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #D9D9D9;
+  padding-bottom: 12px;
+}
+.shop-inner .tech-specs-list .card__list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.shop-inner .tech-specs-list .card__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.shop-inner .options__title {
+  margin-bottom: 40px;
+}
+.shop-inner .more-section {
+  margin-top: 60px;
+}
+
+.item-page {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 767px) {
+  .item-page {
+    margin-top: 40px;
+  }
+}
+.item-page__title {
+  text-align: center;
+}
+.item-page-list {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+@media screen and (max-width: 767px) {
+  .item-page-list {
+    margin-top: 40px;
+  }
+}
+.item-page-list .card {
+  padding: 16px;
+  border: 1px solid #cccccc;
+  display: flex;
+  gap: 60px;
+  width: 550px;
+}
+@media screen and (max-width: 767px) {
+  .item-page-list .card {
+    padding: 16px;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+.item-page-list .card .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  .item-page-list .card .text {
+    justify-content: flex-start;
+    width: min-content;
+  }
+}
+.item-page-list .card .text .name {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item-page-list .card .text .price {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.item-page-list .card .text .links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.item-page-list .card .text .button .more-btn {
+  padding: 8px 20px;
+  gap: 40px;
+}
+.item-page-list .card__image {
+  width: 144px;
+  height: 196px;
+}
+@media screen and (max-width: 767px) {
+  .item-page-list .card__image {
+    width: 132px;
+    height: 178px;
+  }
+}
+.item-page-list .card__mobile-button {
+  width: 100%;
+  margin-top: 10px;
+}
+.item-page-list .card__mobile-button .more-btn {
+  padding: 8px 20px;
+  gap: 40px;
 }
 
 .button .more-btn {
@@ -2665,6 +2848,82 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 10px;
 }
 
+.filter {
+  margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+  .filter {
+    margin-top: 20px;
+  }
+}
+.filter-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.filter__button {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 100px;
+  border: 1px solid #000;
+  transition: 0.3s ease;
+  transition-property: background-color color;
+  line-height: 90%;
+}
+@media screen and (max-width: 767px) {
+  .filter__button {
+    padding: 5px 14px;
+  }
+}
+.filter__button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.filter__button--active {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.breadcrumbs {
+  width: 100vw;
+  background-color: #EAEAEA;
+  padding: 12px 0;
+  overflow: hidden;
+}
+.breadcrumbs-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .breadcrumbs-list {
+    flex-wrap: wrap;
+  }
+}
+.breadcrumbs__link {
+  display: flex;
+  gap: 20px;
+  color: #666666;
+}
+.breadcrumbs__link a {
+  transition: color 0.3s ease;
+}
+.breadcrumbs__link a:hover {
+  color: #000;
+}
+.breadcrumbs__name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 767px) {
+  .breadcrumbs__name {
+    width: 70%;
+  }
+}
+
 body {
   font-family: "Nissan Brand";
   font-weight: 400;
@@ -2718,6 +2977,10 @@ a {
 
 .red {
   color: #C3002F;
+}
+
+.shadow {
+  color: #666666;
 }
 
 .list-styles {
