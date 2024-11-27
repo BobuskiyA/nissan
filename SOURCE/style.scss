@@ -54,7 +54,7 @@ a {
 
 .mobile-hiden {
   @include forMobile {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -172,6 +172,10 @@ a {
   flex-direction: column !important;
 }
 /**********************HOME PAGE***********************/
+
+.footer-menu-mobile {
+  display: none;
+}
 
 /**********************DESIGN PAGE***********************/
 
@@ -793,13 +797,15 @@ a {
   .footer {
     width: 100%;
     padding: 0;
+
     .footer-wrap {
       max-width: 100%;
       width: 100%;
-      padding-top: 5%;
+      // padding-top: 5%;
       display: flex;
       flex-direction: column;
       gap: 0;
+
       .footer-col {
         position: relative;
         border-bottom: 1px solid #fff;
@@ -832,6 +838,8 @@ a {
       .footer-col:last-child {
         margin-top: 10%;
         border: none;
+        width: 100%;
+
         .footer-list {
           display: block;
           .footer-item:first-child {
@@ -845,8 +853,141 @@ a {
         .footer-social {
           width: 100%;
           text-align: center;
+
+          &__list {
+            justify-content: space-between;
+            padding: 0 20px;
+          }
+
+          &__item {
+            width: 40px;
+            height: 40px;
+          }
         }
       }
+    }
+
+    .footer-menu-mobile {
+      display: flex !important;
+
+      .main-list {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+  
+        .dropdown-item {
+          padding: 18px 30px 18px 16px;
+          border-bottom: 1px solid #666666;
+  
+          .dropdown-body {
+            height: 0;
+            opacity: 0;
+            padding: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+  
+            .inner-dropdow {
+              .inner-body {
+                // display: none !important;
+                padding: 0;
+  
+                height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: opacity 0.3s ease-in-out;
+              }
+  
+              &--active {
+                .inner-head-icon {
+                  rotate: 180deg;
+                }
+                .inner-body {
+                  display: flex !important;
+                  height: 100%;
+                  opacity: 1;
+                  padding: 10px 5px !important;
+                }
+              }
+            }
+          }
+  
+          &--active {
+            .head {
+              &-icon {
+                rotate: 180deg;
+              }
+            }
+  
+            .dropdown-body {
+              height: 100%;
+              opacity: 1;
+            }
+          }
+  
+          .head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+  
+            &-icon {
+              transition: rotate 0.3s ease-in-out;
+            }
+          }
+  
+          .inner-list {
+            padding: 10px 0;
+  
+            .inner-dropdow {
+              .inner-head {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 0;
+  
+                &-icon {
+                  transition: rotate 0.3s ease-in-out;
+                }
+              }
+  
+              .inner-body {
+                display: flex;
+                flex-direction: column;
+              }
+  
+              .images-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                row-gap: 22px;
+  
+                .image-item {
+                  width: 150px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  text-align: center;
+  
+                  &__image {
+                    width: 100%;
+                  }
+                }
+              }
+  
+              .list-link {
+                &__item {
+                  padding: 5px 0;
+                }
+              }
+            }
+          }
+        }
+  
+        .closed {
+          height: 0;
+          opacity: 0;
+          overflow: hidden;
+        }
+      }
+  
     }
   }
 }

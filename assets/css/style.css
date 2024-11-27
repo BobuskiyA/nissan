@@ -1030,9 +1030,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   margin-bottom: 100px;
 }
-.section-inform .inform-wrap {
-  width: 75%;
-}
 .section-inform .inform-wrap .inform-list {
   margin-bottom: 100px;
 }
@@ -1142,7 +1139,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 .footer .footer-wrap .footer-col.footer-contact {
-  width: 250px;
+  width: 255px;
 }
 .footer .footer-wrap .footer-col.footer-contact .footer-social__list {
   display: flex;
@@ -2219,48 +2216,103 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header-main .main-menu .menu-pages .menu-list {
   display: flex;
+  gap: 40px;
 }
 .header-main .main-menu .menu-pages .menu-list .menu-item {
-  margin-right: 15px;
+  position: relative;
 }
-.header-main .main-menu .menu-pages .menu-list .menu-item a {
-  font-family: "Nissan Brand";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 14px;
+.header-main .main-menu .menu-pages .menu-list .menu-item__head {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item__head:hover {
+  opacity: 0.4;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item__head-icon {
+  transition: rotate 0.3s ease-in-out;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item--active .menu-item__head-icon {
+  rotate: 180deg;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item--active .submenu-list {
+  opacity: 1 !important;
+  display: flex !important;
+  pointer-events: all !important;
 }
 .header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list {
   position: absolute;
-  top: 20%;
+  top: 180%;
   left: 0;
-  display: none;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   background: #fff;
   padding: 16px;
   gap: 15px;
-  width: fit-content;
+  width: max-content;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
 }
 .header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item {
   list-style: none;
-}
-.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item a {
-  font-family: "Nissan Brand";
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 19px;
-  text-align: left;
+  position: relative;
   color: #000;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
-.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item a::after {
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item::after {
   content: "›";
   font-family: "Courier New";
   font-size: 24px;
   margin-left: 10px;
 }
-.header-main .main-menu .menu-pages .menu-list .menu-item:last-child {
-  margin: 0;
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item--active .submenu-list-modeling {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list-modeling {
+  position: absolute;
+  top: 0;
+  right: -5%;
+  transform: translate(100%, -16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  padding: 16px;
+  gap: 15px;
+  width: fit-content;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list-modeling.images-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 22px;
+  width: 400px;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list-modeling.images-list .image-item {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list-modeling.images-list .image-item__image {
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list-modeling.images-list .image-item__image:hover {
+  opacity: 0.4;
 }
 .header-main .design-menu {
   background: #eaeaea;
@@ -2651,7 +2703,7 @@ a {
 
 @media screen and (max-width: 767px) {
   .mobile-hiden {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -2762,6 +2814,10 @@ a {
 }
 
 /**********************HOME PAGE***********************/
+.footer-menu-mobile {
+  display: none;
+}
+
 /**********************DESIGN PAGE***********************/
 .main-design-section {
   display: flex;
@@ -3339,7 +3395,6 @@ a {
   .footer .footer-wrap {
     max-width: 100%;
     width: 100%;
-    padding-top: 5%;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -3376,6 +3431,7 @@ a {
   .footer .footer-wrap .footer-col:last-child {
     margin-top: 10%;
     border: none;
+    width: 100%;
   }
   .footer .footer-wrap .footer-col:last-child .footer-list {
     display: block;
@@ -3390,6 +3446,103 @@ a {
   .footer .footer-wrap .footer-col:last-child .footer-social {
     width: 100%;
     text-align: center;
+  }
+  .footer .footer-wrap .footer-col:last-child .footer-social__list {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .footer .footer-wrap .footer-col:last-child .footer-social__item {
+    width: 40px;
+    height: 40px;
+  }
+  .footer .footer-menu-mobile {
+    display: flex !important;
+  }
+  .footer .footer-menu-mobile .main-list {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item {
+    padding: 18px 30px 18px 16px;
+    border-bottom: 1px solid #666666;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .dropdown-body {
+    height: 0;
+    opacity: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .dropdown-body .inner-dropdow .inner-body {
+    padding: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .dropdown-body .inner-dropdow--active .inner-head-icon {
+    rotate: 180deg;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .dropdown-body .inner-dropdow--active .inner-body {
+    display: flex !important;
+    height: 100%;
+    opacity: 1;
+    padding: 10px 5px !important;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item--active .head-icon {
+    rotate: 180deg;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item--active .dropdown-body {
+    height: 100%;
+    opacity: 1;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .head-icon {
+    transition: rotate 0.3s ease-in-out;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .inner-list {
+    padding: 10px 0;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .inner-list .inner-dropdow .inner-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .inner-list .inner-dropdow .inner-head-icon {
+    transition: rotate 0.3s ease-in-out;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .inner-list .inner-dropdow .inner-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .inner-list .inner-dropdow .images-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 22px;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .inner-list .inner-dropdow .images-list .image-item {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .inner-list .inner-dropdow .images-list .image-item__image {
+    width: 100%;
+  }
+  .footer .footer-menu-mobile .main-list .dropdown-item .inner-list .inner-dropdow .list-link__item {
+    padding: 5px 0;
+  }
+  .footer .footer-menu-mobile .main-list .closed {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
   }
 }
 
