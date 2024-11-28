@@ -172,3 +172,31 @@ $(document).ready(function() {
     }
   );
 }); 
+
+$(document).ready(function() {
+  // Toggle the dropdown when clicking on the head
+  $('#form-dropdown .head').click(function() {
+    $(this).closest('.dropdown-choose').toggleClass('dropdown-choose--active');
+  });
+
+  // Change the text in the head and update the body items when clicking on an item
+  $('#form-dropdown .item').click(function() {
+    var newSelectedText = $(this).text();
+    var oldSelectedText = $('#form-dropdown .head p').text();
+
+    // Update the head text
+    $('#form-dropdown .head p').text(newSelectedText);
+
+    // Update the body items
+    $('#form-dropdown .item').each(function() {
+      if ($(this).text() === newSelectedText) {
+        $(this).text(oldSelectedText);
+      } else if ($(this).text() === oldSelectedText) {
+        $(this).text(newSelectedText);
+      }
+    });
+
+    // Close the dropdown
+    $('#form-dropdown').removeClass('dropdown-choose--active');
+  });
+});
