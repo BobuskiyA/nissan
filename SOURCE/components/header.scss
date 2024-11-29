@@ -99,6 +99,7 @@
       .menu-list {
         display: flex;
         gap: 40px;
+        padding-right: 13px;
 
         .menu-item {
           position: relative;
@@ -241,27 +242,41 @@
         a {
           color: #000;
         }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: -1px;
+          right: -1px;
+          height: 3px;
+          background: #c3002f;
+          transform: translateY(-100%);
+
+          opacity: 0;
+
+          transition: opacity .3s ease;
+        }
+
+        &:hover::after {
+          opacity: 1;
+        }
       }
-      .active::before {
-        content: "";
-        position: absolute;
-        top: 99%;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 0.9em;
-        height: 15%;
-        clip-path: polygon(50% 100%, 0 0, 100% 0);
-        background: #c3002f;
-      }
-      .active::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: -1px;
-        right: -1px;
-        height: 3px;
-        background: #c3002f;
-        transform: translateY(-100%);
+      .active {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 99%;
+          left: 50%;
+          transform: translate(-50%, 0);
+          width: 0.9em;
+          height: 15%;
+          clip-path: polygon(50% 100%, 0 0, 100% 0);
+          background: #c3002f;
+        }
+
+        &::after {
+          opacity: 1 !important;
+        }
       }
     }
   }
@@ -365,7 +380,7 @@
   }
 
   .main-menu {
-    padding: 16px 16px 30px;
+    padding: 14px 16px 30px;
     background: none;
 
     .menu-inform {
@@ -373,24 +388,27 @@
       justify-content: space-between;
       width: 100%;
       &-logo {
-        margin-right: 12px !important;
+        margin-right: 0px !important;
       }
     }
 
     .menu-inform-title {
       font-size: 16px !important;
-      line-height: 100% !important;
+      line-height: 110% !important;
       width: 180px !important;
     }
 
     .menu-button {
       position: relative;
-      width: 40px;
+      width: 38px;
       height: 33px;
 
       &-icon {
         position: absolute;
         inset: 0;
+
+        width: 100%;
+        height: 100%;
 
         transition: opacity 0.3s ease-in-out;
 
@@ -446,7 +464,6 @@
       .dropdown-item {
         padding: 14px 30px 12px 16px;
         border-top: 1px solid #d9d9d9;
-        border-bottom: 1px solid #d9d9d9;
 
         .dropdown-body {
           height: 0;

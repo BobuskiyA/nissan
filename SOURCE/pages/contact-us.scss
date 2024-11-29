@@ -1,0 +1,76 @@
+.contact-us {
+  margin-top: 80px;
+  margin-bottom: 100px;
+
+  @include forMobile {
+    margin-top: 40px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  &__section {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+
+    .contact-card {
+      width: 50%;
+      
+      @include forMobile {
+        width: 100%;
+      }
+
+      .title {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #D9D9D9;
+        margin-bottom: 20px;
+      }
+
+      .schedule {
+        &__list {
+          margin-top: 20px;
+          display: flex;
+          gap: 60px;
+          
+          @include forMobile {
+            flex-direction: column;
+            gap: 20px;
+          }    
+
+          ul {
+            margin-top: 10px;
+          }
+        }
+
+        &__item {
+          &-link {
+            transition: opacity 0.3s ease;
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__map {
+    margin-top: 60px;
+
+    iframe {
+      @include forMobile {
+        width: 100%;
+      }
+    }
+  }
+}

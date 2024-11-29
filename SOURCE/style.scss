@@ -14,6 +14,7 @@
 @import "./pages/shopInner.scss";
 @import "./pages/pricesOffers.scss";
 @import "./pages/services.scss";
+@import "./pages/contact-us.scss";
 
 @import "./components/item-page.scss";
 @import "./components/button.scss";
@@ -657,14 +658,16 @@ a {
     padding: 0;
     margin-bottom: 15%;
     justify-content: center;
+    margin-top: 80px;
     .model-wrap {
       max-width: 90%;
       .section-title {
         .title {
           font-size: 32px;
-          text-align: center;
+          // text-align: center;
         }
       }
+      
       .model-list {
         display: flex;
         flex-direction: column;
@@ -682,6 +685,9 @@ a {
                 margin-top: 0;
               }
             }
+          }
+          .section-subtitle{
+            margin-bottom: 20px;
           }
         }
       }
@@ -834,7 +840,7 @@ a {
         border-bottom: 1px solid #fff;
         align-items: start;
         padding: 0 5%;
-        margin-bottom: 5%;
+        margin-bottom: 40px;
         .footer-col__title {
           text-transform: uppercase;
           font-size: 16px;
