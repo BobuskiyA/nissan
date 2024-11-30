@@ -24,6 +24,7 @@
 @import "./components/filter.scss";
 @import "./components/breadcrumbs.scss";
 @import "./components/form.scss";
+@import "./components/modelMenu.scss";
 
 body {
   font-family: "Nissan Brand";
@@ -229,6 +230,8 @@ a {
   }
   .description-inform {
     text-align: justify;
+    line-height: 150%;
+    font-weight: 300;
   }
 
   @include forMobile {

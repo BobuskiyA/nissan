@@ -234,6 +234,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: sticky;
+    top: 0;
+
     .menu-list {
       display: flex;
       justify-content: center;

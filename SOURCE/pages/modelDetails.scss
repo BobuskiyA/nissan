@@ -73,6 +73,17 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+        
+        @include forMobile {
+          width: 100%;
+          gap: 20px;
+        }
+
+        .price {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
 
         .buttons-wrapper {
           display: flex;
@@ -113,7 +124,21 @@
     backdrop-filter: blur(25px);
 
     @include forMobile {
-      display: none;
+      // display: none;
+      padding: 20px;
+      gap: 10px;
+      border-radius: 0vw;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: none;
+    }
+
+    &--mobile {
+      position: sticky;
+      bottom: auto;
+      top: -1%;
+      background: black;
     }
 
     &__link {
@@ -123,6 +148,10 @@
       &:hover {
         opacity: 0.4;
       }
+
+      @include forMobile {
+        padding: 5px;
+      }  
     }
   }
 
@@ -163,62 +192,65 @@
       }
     }
 
-    .navigation {
+  }
+
+  .navigation {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #000000;
+    color: #fff;
+    padding: 12px 0;
+    width: 100%;
+
+    &__content {
+      max-width: 90%;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    &__main {
+      align-self: center;
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: #000000;
-      color: #fff;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 30px;
+    }
 
-      &__content {
-        max-width: 90%;
-        width: 90%;
-        margin: 12px auto;
+    &__link {
+      position: relative;
+      padding: 4px 0;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      &__main {
-        align-self: center;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 30px;
-      }
-
-      &__link {
-        position: relative;
-        padding: 4px 0;
-
-        &:hover {
-          &::after {
-            opacity: 1;
-          }
-        }
-
+      &:hover {
         &::after {
-          content: "";
-          display: block;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background-color: #fff;
-          opacity: 0;
-
-          transition: opacity 0.3s ease;
+          opacity: 1;
         }
       }
 
-      .button {
-        .more-btn {
-          padding: 4px 15px !important;
-        }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #fff;
+        opacity: 0;
+
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    .button {
+      .more-btn {
+        padding: 4px 15px !important;
       }
     }
   }
