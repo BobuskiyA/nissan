@@ -1,33 +1,37 @@
 $(document).ready(function () {
-  const $sliderList = $(".slider-list");
   const $sliderPrev = $(".slider-prev");
   const $currentSlide = $(".current-slide");
+  
   const $totalSlides = $(".total-slides");
 
-  $sliderList.slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true,
-    fade: true,
-    appendDots: $(".slider-dots"),
-    asNavFor: ".slider-prev",
-    customPaging: function (slick, index) {
-      var image = $(slick.$slides[index]).find(".slider__img").attr("src");
-      return '<div class="dots-line"></div>';
-    },
-  });
+
+  // $sliderPrev.slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   dots: true,
+  //   fade: true,
+  //   asNavFor: ".slider-prev",
+   
+  // });
+
 
   $sliderPrev.slick({
-    slidesToShow: 1,
     slidesToScroll: 1,
-    asNavFor: ".slider-list",
     arrows: true,
-    dots: false,
+    dots: true,
     centerMode: false,
     focusOnSelect: true,
     nextArrow: document.querySelector(".slick-next"),
     prevArrow: document.querySelector(".slick-prev"),
+    appendDots: $(".slider-dots"),
+    slidesToShow: 2,
+    // centerMode: true,
+    variableWidth: true,
+    customPaging: function (slick, index) {
+      var image = $(slick.$slides[index]).find(".slider__img").attr("src");
+      return '<div class="dots-line"></div>';
+    },
     responsive: [
       {
         breakpoint: 764,
@@ -40,9 +44,9 @@ $(document).ready(function () {
     ],
   });
 
-  $totalSlides.text($sliderList.slick("getSlick").slideCount);
+  $totalSlides.text($sliderPrev.slick("getSlick").slideCount);
 
-  $sliderList.on("afterChange", function (event, slick, currentSlide) {
+  $sliderPrev.on("afterChange", function (event, slick, currentSlide) {
     $currentSlide.text(currentSlide + 1);
   });
 });
@@ -138,12 +142,44 @@ $(document).ready(function () {
 });
 
 $(document).ready(function() {
-  $('.menu-list .menu-item #header-dropdown-head').click(function () {
-    $(this).closest(".menu-item").toggleClass('menu-item--active');
-    
-    $(this).closest(".menu-item").siblings('.menu-item').removeClass('menu-item--active');
-  });
+  $('.menu-list .menu-item #header-dropdown-head').hover(
+    function () {
+      $(this).closest(".menu-item").addClass('menu-item--active');
+      
+      // Remove active state from sibling menu items
+      $(this).closest(".menu-item").siblings('.menu-item').removeClass('menu-item--active');
+    },
+    function() {
+      var $menuItem = $(this).closest(".menu-item");
+      setTimeout(function() {
+        // Check if not hovering over the menu item or its submenu
+        if (!$menuItem.is(':hover') && !$menuItem.find('.submenu-list').is(':hover')) {
+          $menuItem.removeClass('menu-item--active');
+        }
+      }, 50);
+    }
+  );
 
+  // Keep menu open when inside submenu or submenu-list-modeling
+  $('.submenu-list, .submenu-list-modeling').hover(
+    function() {
+      $(this).closest('.menu-item').addClass('menu-item--active');
+    },
+    function() {
+      var $menuItem = $(this).closest('.menu-item');
+      setTimeout(function() {
+        // Remove active state if not hovering over menu item or its submenus
+        if (!$menuItem.is(':hover') && 
+            !$menuItem.find('#header-dropdown-head').is(':hover') && 
+            !$menuItem.find('.submenu-list').is(':hover') && 
+            !$menuItem.find('.submenu-list-modeling').is(':hover')) {
+          $menuItem.removeClass('menu-item--active');
+        }
+      }, 50);
+    }
+  );
+
+  // Existing submenu-item hover logic remains the same
   $('.submenu-item:has(.submenu-list-modeling)').hover(
     function() {
       $(this).addClass('submenu-item--active');
@@ -171,7 +207,7 @@ $(document).ready(function() {
       }, 50);
     }
   );
-}); 
+});
 
 $(document).ready(function() {
   // Toggle the dropdown when clicking on the head
