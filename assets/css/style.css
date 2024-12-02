@@ -2896,7 +2896,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 767px) {
   .header-main .main-menu .menu-inform .menu-left .menu-link {
-    transform: translateY(1px);
+    transform: translateY(3px);
   }
 }
 .header-main .main-menu .menu-inform .menu-inform-logo {
@@ -3166,7 +3166,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header-mobile .main-menu .menu-inform-title {
   font-size: 16px !important;
-  line-height: 120% !important;
+  line-height: 124% !important;
   width: 180px !important;
 }
 .header-mobile .main-menu .menu-button {
