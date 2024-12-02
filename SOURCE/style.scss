@@ -465,6 +465,11 @@ a {
     margin-bottom: 15%;
     justify-content: center;
     margin-top: 80px;
+
+    @include forMobile {
+      margin-top: 60px;
+    }
+
     .model-wrap {
       max-width: 90%;
       .section-title {
