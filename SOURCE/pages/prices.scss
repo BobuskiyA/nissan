@@ -56,11 +56,16 @@
 
           .more-btn {
             justify-content: space-between;
+            padding: 10px 20px;
           }
         }
       }
 
       .features {
+        @include forDesktop {
+          margin-right: 40px;
+        }
+
         @include forMobile {
           align-self: flex-start;
           margin-top: 40px;

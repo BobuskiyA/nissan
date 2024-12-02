@@ -322,6 +322,11 @@
       }
       .inform-item:last-child {
         margin: 0;
+
+        @include forMobile {
+          margin: auto;
+          margin-bottom: 60px !important;
+        }
       }
     }
     .inform-description {

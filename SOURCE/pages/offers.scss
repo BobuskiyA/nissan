@@ -10,6 +10,10 @@
   &__title {
     font-size: 42px;
     text-align: center;
+
+    @include forMobile {
+      font-size: 32px;
+    }
   }
 
   .cards-wrapper {
@@ -20,6 +24,7 @@
     
     @include forMobile {
       gap: 60px;
+      margin-top: 40px;
     }  
 
     .card {

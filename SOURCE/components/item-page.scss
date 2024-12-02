@@ -11,15 +11,11 @@
   }
 
   &-list {
-    margin-top: 60px;
+    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
 
     gap: 40px;
-
-    @include forMobile {
-      margin-top: 40px;
-    }
 
     .card {
       padding: 16px;

@@ -116,6 +116,14 @@
     }
   }
 
+  .slider-section {
+    margin-top: 80px;
+
+    @include forMobile {
+      margin-top: 60px;
+    }
+  }
+
   .features {
     display: flex;
     gap: 30px;

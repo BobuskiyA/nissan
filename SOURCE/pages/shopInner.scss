@@ -2,8 +2,16 @@
   margin-top: 60px;
   margin-bottom: 100px;
 
+  @include forMobile {
+    margin-top: 20px;
+  }
+
   .container {
     margin-top: 60px;
+
+    @include forMobile {
+      margin-top: 40px;
+    }
   }
 
   &__title {
@@ -11,7 +19,9 @@
     margin-bottom: 60px;
 
     @include forMobile {
-      margin-bottom: 40px;
+      margin-top: 0 !important;
+      margin-bottom: 0px;
+      width: 100% !important;
     }
   }
 

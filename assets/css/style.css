@@ -1091,6 +1091,12 @@ h1, h2, h3, h4, h5, h6 {
 .section-inform .inform-wrap .inform-list .inform-item:last-child {
   margin: 0;
 }
+@media screen and (max-width: 767px) {
+  .section-inform .inform-wrap .inform-list .inform-item:last-child {
+    margin: auto;
+    margin-bottom: 60px !important;
+  }
+}
 .section-inform .inform-wrap .inform-description {
   font-family: "Nissan Brand";
   font-weight: 300;
@@ -1271,6 +1277,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
   }
 }
+.design-page .slider-section {
+  margin-top: 80px;
+}
+@media screen and (max-width: 767px) {
+  .design-page .slider-section {
+    margin-top: 60px;
+  }
+}
 .design-page .features {
   display: flex;
   gap: 30px;
@@ -1332,6 +1346,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 42px;
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  .offers__title {
+    font-size: 32px;
+  }
+}
 .offers .cards-wrapper {
   margin-top: 80px;
   display: flex;
@@ -1341,6 +1360,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 767px) {
   .offers .cards-wrapper {
     gap: 60px;
+    margin-top: 40px;
   }
 }
 .offers .cards-wrapper .card {
@@ -1436,6 +1456,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .prices .cards-wrapper .card .price .button .more-btn {
   justify-content: space-between;
+  padding: 10px 20px;
+}
+@media screen and (min-width: 767px) {
+  .prices .cards-wrapper .card .features {
+    margin-right: 40px;
+  }
 }
 @media screen and (max-width: 767px) {
   .prices .cards-wrapper .card .features {
@@ -1974,6 +2000,11 @@ h1, h2, h3, h4, h5, h6 {
   top: -1%;
   background: black;
 }
+@media screen and (min-width: 767px) {
+  .model-details .menu--mobile {
+    display: none !important;
+  }
+}
 .model-details .menu__link {
   transition: opacity 0.3s ease;
   padding: 14px;
@@ -2167,13 +2198,17 @@ h1, h2, h3, h4, h5, h6 {
 .model-details .product-slider .prices-slider-section .slider-row .slider-arrow .slick-button svg {
   width: 100%;
   height: 100%;
+  transform: translateY(-50%);
 }
 .model-details .product-slider .prices-slider-section .slider-pagination {
   position: relative;
   display: flex;
   gap: 20px;
-  transform: translateY(-100%);
-  margin-left: 13%;
+  transform: translate(-3%, -100%);
+  width: 85%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (max-width: 767px) {
   .model-details .product-slider .prices-slider-section .slider-pagination {
@@ -2307,8 +2342,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 60px;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 767px) {
+  .shop-inner {
+    margin-top: 20px;
+  }
+}
 .shop-inner .container {
   margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+  .shop-inner .container {
+    margin-top: 40px;
+  }
 }
 .shop-inner__title {
   text-align: center;
@@ -2316,7 +2361,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 767px) {
   .shop-inner__title {
-    margin-bottom: 40px;
+    margin-top: 0 !important;
+    margin-bottom: 0px;
+    width: 100% !important;
   }
 }
 .shop-inner .text {
@@ -2425,6 +2472,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 767px) {
   .prices-offers {
     margin-top: 40px;
+    margin-bottom: 0px;
   }
 }
 .prices-offers-page {
@@ -2447,6 +2495,8 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     width: 100%;
     gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 0px;
   }
 }
 .prices-offers .element__image {
@@ -2462,7 +2512,7 @@ h1, h2, h3, h4, h5, h6 {
 .prices-offers .element-about {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 20px;
 }
 @media screen and (max-width: 767px) {
   .prices-offers .element-about {
@@ -2472,15 +2522,23 @@ h1, h2, h3, h4, h5, h6 {
 .prices-offers .element .buttons-wrapper {
   display: flex;
   gap: 20px;
+  margin-top: 20px;
 }
 @media screen and (max-width: 767px) {
   .prices-offers .element .buttons-wrapper {
     flex-direction: column;
     gap: 10px;
+    margin-top: 0;
   }
   .prices-offers .element .buttons-wrapper .button {
     width: fit-content;
   }
+}
+.prices-offers .element .buttons-wrapper .button--black .more-btn {
+  align-items: center;
+}
+.prices-offers .element .buttons-wrapper .button .more-btn {
+  padding: 10px 20px;
 }
 
 .services {
@@ -2569,15 +2627,10 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .item-page-list {
-  margin-top: 60px;
+  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-}
-@media screen and (max-width: 767px) {
-  .item-page-list {
-    margin-top: 40px;
-  }
 }
 .item-page-list .card {
   padding: 16px;
@@ -2649,7 +2702,6 @@ h1, h2, h3, h4, h5, h6 {
 .button .more-btn {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 15px;
   padding: 15px;
   width: 100%;
@@ -2773,6 +2825,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-main {
   width: 100%;
+}
+.header-main--home .main-menu {
+  align-items: flex-start !important;
+  padding: 60px 90px 30px;
 }
 .header-main .nav-submenu__wrap {
   display: flex;
@@ -3291,7 +3347,7 @@ h1, h2, h3, h4, h5, h6 {
 .dropdown--active .body {
   padding: 26px 56px 36px !important;
   max-height: 300vh !important;
-  transition: max-height 1s ease, padding 0.01s ease !important;
+  transition: max-height 0.5s ease, padding 0.01s ease !important;
 }
 @media screen and (max-width: 767px) {
   .dropdown--active .body {
@@ -3321,7 +3377,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  transition: max-height 1s ease, padding 0.01s 0.8s ease;
+  transition: max-height 0.5s ease, padding 0.01s 0.45s ease;
 }
 .dropdown .body .list {
   display: flex;
@@ -3407,10 +3463,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form {
-  margin-top: 40px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+@media screen and (max-width: 767px) {
+  .form {
+    margin-top: 40px;
+  }
 }
 .form-wrapper {
   margin-top: 80px;
@@ -3436,6 +3497,7 @@ h1, h2, h3, h4, h5, h6 {
   .form .car-select {
     flex-direction: column-reverse;
     gap: 40px;
+    margin-top: 40px;
   }
 }
 .form .car-select__wrapper {
@@ -3450,7 +3512,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .form .car-select__image {
-  width: 345px;
+  width: 342px;
   height: 134px;
 }
 @media screen and (max-width: 767px) {
@@ -3723,6 +3785,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-model-menu .head {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 14px 30px 12px 16px;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
@@ -3933,12 +3996,17 @@ a {
 .more-section .more-title {
   font-family: "Nissan Brand";
   font-weight: 300;
-  font-size: 54px;
-  line-height: 50px;
+  font-size: 36px;
+  line-height: 110%;
   letter-spacing: 1px;
   text-align: center;
   margin-bottom: 40px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .more-section .more-title {
+    font-size: 28px;
+  }
 }
 .more-section .more-btn-groupe {
   display: flex;
@@ -3971,6 +4039,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .slider-section {
+    margin-bottom: 40px;
     width: 100% !important;
   }
 }
@@ -3981,11 +4050,11 @@ a {
   gap: 20px;
   height: 500px;
   padding-bottom: 30px;
-  margin: 80px auto 0;
+  margin: 0 auto;
 }
 @media screen and (max-width: 767px) {
   .slider-section .slider-wrap {
-    margin: 60px auto 0;
+    margin: 0 auto;
   }
 }
 .slider-section .slider-wrap .slider-prev {
