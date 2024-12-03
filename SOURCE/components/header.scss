@@ -134,6 +134,7 @@
 
         .menu-item {
           position: relative;
+
           &__head {
             display: flex;
             gap: 5px;
@@ -158,6 +159,15 @@
               pointer-events: all !important;
             }
           }
+
+          &:nth-last-of-type(1),
+          &:nth-last-of-type(2) {
+            .submenu-list {
+              left: auto;
+              right: 0;
+            }
+          }
+
 
           .submenu-list {
             position: absolute;

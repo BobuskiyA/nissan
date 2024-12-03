@@ -3039,6 +3039,10 @@ h1, h2, h3, h4, h5, h6 {
   display: flex !important;
   pointer-events: all !important;
 }
+.header-main .main-menu .menu-pages .menu-list .menu-item:nth-last-of-type(1) .submenu-list, .header-main .main-menu .menu-pages .menu-list .menu-item:nth-last-of-type(2) .submenu-list {
+  left: auto;
+  right: 0;
+}
 .header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list {
   position: absolute;
   top: 150%;
