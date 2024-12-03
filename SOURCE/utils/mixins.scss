@@ -4,6 +4,12 @@
   }
 }
 
+@mixin forSmallDesktop() {
+  @media screen and (min-width: 767px) {
+    @content;
+  }
+}
+
 @mixin forDesktop() {
   @media screen and (min-width: 767px) {
     @content;

@@ -140,6 +140,7 @@
             align-items: center;
             transition: opacity 0.3s ease;
             cursor: pointer;
+            text-wrap-mode: nowrap;
 
             &:hover {
               opacity: 0.4;

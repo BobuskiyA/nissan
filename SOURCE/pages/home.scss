@@ -1,9 +1,21 @@
 .main-section {
-  height: 35.417vw;
   // padding-top: 20%;
   background-size: cover;
   display: flex;
   align-items: flex-end;
+
+  @include forDesktop {
+    height: 35.417vw;
+  }
+  
+  @include forSmallDesktop {
+    // height: 40vw;
+  }
+
+  @include forMobile {
+    flex-direction: column;
+  }
+
   .car-info-wrap {
     padding: 0 80px 2.604vw;
     display: flex;
@@ -15,6 +27,9 @@
       display: flex;
       flex-direction: column;
       width: 30%;
+      @include forSmallDesktop {
+        width: 40%;
+      }
       .car-info-title {
         font-family: "Nissan Brand";
         font-weight: 400;
