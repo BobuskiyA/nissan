@@ -28,7 +28,9 @@
       flex-direction: column;
       width: 30%;
       @include forSmallDesktop {
-        width: 32%;
+        min-width: 32%;
+        max-width: 45%;
+        width: auto;
       }
       .car-info-title {
         font-family: "Nissan Brand";
@@ -38,6 +40,7 @@
         color: #000;
         margin-bottom: 10px;
         text-transform: uppercase;
+  
       }
       .car-info-subtitle {
         font-family: "Nissan Brand";

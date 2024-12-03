@@ -832,9 +832,11 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   width: 30%;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 767px) and (max-width: 1750px) {
   .main-section .car-info-wrap .car-info {
-    width: 32%;
+    min-width: 32%;
+    max-width: 45%;
+    width: auto;
   }
 }
 .main-section .car-info-wrap .car-info .car-info-title {
@@ -2900,13 +2902,19 @@ h1, h2, h3, h4, h5, h6 {
 .header-main {
   width: 100%;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 767px) and (max-width: 1750px) {
+  .header-main--home .menu-inform-logo {
+    width: 76px;
+    height: 64px;
+  }
+}
+@media screen and (min-width: 1750px) {
   .header-main--home .menu-inform-logo {
     width: 120px !important;
     height: 100px !important;
   }
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 1750px) {
   .header-main--home .menu-inform-title {
     line-height: 190% !important;
   }
@@ -3007,7 +3015,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   font-weight: 300;
   line-height: 34px;
-  width: 50%;
+  width: 52%;
 }
 .header-main .main-menu .menu-pages {
   position: relative;
