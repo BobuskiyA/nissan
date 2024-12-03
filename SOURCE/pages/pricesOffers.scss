@@ -9,6 +9,10 @@
   
   &-page {
     margin-bottom: 100px;
+    
+    @include forMobile {
+      margin-bottom: 40px;
+    }  
   }
 
   .title {

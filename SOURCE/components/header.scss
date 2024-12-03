@@ -2,9 +2,24 @@
   width: 100%;
 
   &--home {
+    .menu-inform {
+      &-logo {
+        @include forDesktop {
+          width: 120px !important;
+          height: 100px !important;
+        }
+      }
+      &-title {
+        @include forDesktop {
+          line-height: 190% !important;
+        }
+      }
+    }
     .main-menu {
-      align-items:  flex-start !important;
-      padding: 60px 90px 30px;
+      @include forDesktop {
+        align-items: flex-start !important;
+        padding: 60px 90px 30px !important;
+      }
     }
   }
 
@@ -275,7 +290,7 @@
 
           opacity: 0;
 
-          transition: opacity .3s ease;
+          transition: opacity 0.3s ease;
         }
 
         &:hover::after {
@@ -467,7 +482,7 @@
     justify-content: space-between;
     position: absolute;
     inset: 78px 0 0;
-    z-index: 100;
+    z-index: 120;
     background-color: #fff;
     overflow: scroll;
     opacity: 0;

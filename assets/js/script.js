@@ -68,6 +68,7 @@ $(document).ready(function () {
         breakpoint: 764,
         settings: {
           perPage: 1,
+          start: 0,
           variableWidth: true,
         },
       },
@@ -234,5 +235,26 @@ $(document).ready(function() {
 
     // Close the dropdown
     $('#form-dropdown').removeClass('dropdown-choose--active');
+  });
+});
+
+$(document).ready(function() {
+  var $menuArea = $('#menu-area');
+  var $mobileMenu = $('.menu.menu--mobile.mobile-only');
+  var lastScrollTop = $(window).scrollTop();
+
+  $(window).on('scroll', function() {
+      var currentScrollTop = $(window).scrollTop();
+      var menuAreaRect = $menuArea[0].getBoundingClientRect();
+
+      if (currentScrollTop < lastScrollTop && 
+          menuAreaRect.top <= 0 && 
+          menuAreaRect.bottom >= 0) {
+          $mobileMenu.addClass('menu--mobile--active');
+      } else {
+          $mobileMenu.removeClass('menu--mobile--active');
+      }
+
+      lastScrollTop = currentScrollTop;
   });
 });

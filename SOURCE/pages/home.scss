@@ -1,31 +1,13 @@
-// .home {
-//   .header-main {
-//     .main-menu {
-//       .menu-inform {
-//         .menu-inform-title {
-//           color: #fff;
-//           font-size: 34px;
-//           line-height: 54px;
-//         }
-//       }
-//       .menu-pages {
-//         .menu-list {
-//           .menu-item a {
-//             color: #fff;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
 .main-section {
-  // height: 650px;
-  padding-top: 20%;
+  height: 35.417vw;
+  // padding-top: 20%;
   background-size: cover;
+  display: flex;
+  align-items: flex-end;
   .car-info-wrap {
-    padding: 0 80px 50px;
+    padding: 0 80px 2.604vw;
     display: flex;
+    width: -webkit-fill-available;
     .car-info {
       padding: 20px;
       background: #ffffff80;
