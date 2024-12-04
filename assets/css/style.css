@@ -1243,6 +1243,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 767px) {
   .design-page-card {
     margin-top: 60px;
+    gap: 20px;
   }
 }
 .design-page-card__title {
@@ -2972,6 +2973,11 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 49.91%, #000000 100%);
   color: #fff;
 }
+@media screen and (max-width: 767px) {
+  .header-main .main-menu-black {
+    padding: 14px 16px 30px !important;
+  }
+}
 .header-main .main-menu-black .menu-item__head-icon path {
   stroke: white !important;
 }
@@ -3252,6 +3258,11 @@ h1, h2, h3, h4, h5, h6 {
 .header-mobile .main-menu {
   padding: 14px 16px 30px;
   background: none;
+}
+@media screen and (max-width: 767px) {
+  .header-mobile .main-menu {
+    padding: 14px 16px;
+  }
 }
 .header-mobile .main-menu .menu-inform {
   display: flex;
